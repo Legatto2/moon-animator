@@ -7,7 +7,7 @@
 
 <p>
   <a href="#getting-started"><img src="https://img.shields.io/badge/platform-Roblox_Studio-89b4fa?style=flat-square" alt="Platform: Roblox Studio"></a>
-  <a href="https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml"><img src="https://img.shields.io/github/actions/workflow/status/Legatto2/moon-animator/verify-hardening.yml?branch=main&amp;style=flat-square&amp;label=verification" alt="Live verification workflow status"></a>
+  <a href="https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml?query=branch%3Ahardening%2Freviewed-v34000"><img src="https://img.shields.io/github/actions/workflow/status/Legatto2/moon-animator/verify-hardening.yml?branch=hardening%2Freviewed-v34000&amp;style=flat-square&amp;label=candidate_verification" alt="Live candidate verification workflow status"></a>
   <a href="hardening/evidence/verification.json"><img src="https://img.shields.io/badge/local_tests-167_passed-a6e3a1?style=flat-square" alt="Recorded local tests: 167 passed"></a>
   <a href="hardening/REVIEW.md"><img src="https://img.shields.io/badge/status-review_candidate-f9e2af?style=flat-square" alt="Status: review candidate"></a>
 </p>
