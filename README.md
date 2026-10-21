@@ -13,13 +13,13 @@
 </p>
 
 <p>
-  <a href="hardening/candidate/Moon_Animator_2_Windows_Install.zip?raw=true"><strong>Download for Windows</strong></a>
+  <a href="https://raw.githubusercontent.com/Legatto2/moon-animator/07fcce707c17f03f6a1a8059c1bace613a741e1d/hardening/candidate/Moon_Animator_2_Windows_Install.zip"><strong>Download for Windows</strong></a>
   &nbsp;&middot;&nbsp;
   <a href="hardening/docs/INSTALL.md">Installation help</a>
   &nbsp;&middot;&nbsp;
   <a href="#documentation">Documentation</a>
   &nbsp;&middot;&nbsp;
-  <a href="hardening/candidate/Moon_Animator_2_review_candidate.rbxm?raw=true">Download plugin file</a>
+  <a href="https://raw.githubusercontent.com/Legatto2/moon-animator/07fcce707c17f03f6a1a8059c1bace613a741e1d/hardening/candidate/Moon_Animator_2_review_candidate.rbxm">Download plugin file</a>
 </p>
 
 <p><sub>Unofficial &middot; Based on Moon Animator 2 v34000 &middot; Maintained in Legatto2/moon-animator</sub></p>
@@ -42,7 +42,7 @@ The inherited rig, part, and camera animation tools, easing, timeline controls, 
 
 ## Getting started
 
-1. **Download** the [Windows install ZIP](hardening/candidate/Moon_Animator_2_Windows_Install.zip?raw=true).
+1. **Download** the [Windows install ZIP](https://raw.githubusercontent.com/Legatto2/moon-animator/07fcce707c17f03f6a1a8059c1bace613a741e1d/hardening/candidate/Moon_Animator_2_Windows_Install.zip).
 2. **Extract it.** Right-click the ZIP, choose **Extract All**, and open the extracted folder.
 3. **Install.** Close Roblox Studio, double-click **Install.cmd**, and wait for the success message. Reopen Studio and find **Moon Animator** in the Plugins toolbar/menu.
 
@@ -70,7 +70,7 @@ The supported operations are `sound.play`, `sound.stop`, `particle.emit`, and `p
 
 ## Verification you can reproduce
 
-The [recorded verification](hardening/evidence/verification.json) contains the exact focused test results, compilation of **all 139 scripts**, and byte-for-byte rebuild checks for the model, manifest, and Windows package. The [full local log](hardening/evidence/verification.log) and [GitHub workflow](https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml) are available for developers.
+The [recorded verification](hardening/evidence/verification.json) contains the exact focused test results, compilation of **all 139 scripts**, and byte-for-byte rebuild checks for the model, manifest, and Windows package. The [full local log](hardening/evidence/verification.log), [passing Windows installer checks](hardening/evidence/windows-installer-ci.log), and [GitHub workflow](https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml) are available for developers.
 
 Plugin behavior tests use explicit Roblox and UI mocks. Compilation and these tests do not run the complete plugin or establish Studio compatibility. The Windows workflow tests the installer in temporary folders; it does not launch Studio. The badge above reports the workflow on `main`.
 

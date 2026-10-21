@@ -161,6 +161,8 @@ failure behavior. Neither job executes the complete plugin or launches Studio.
 Exact local test totals and hashes are in
 [evidence/verification.json](evidence/verification.json). Behavioral tests use
 explicit Roblox/UI mocks; syntax compilation is not a Studio integration test.
+The [recorded Windows CI result](evidence/windows-installer-ci.log) also confirms
+all nine native installer tests passed, including replacement with backup.
 
 ## Studio acceptance check
 

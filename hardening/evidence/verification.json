@@ -123,7 +123,6 @@
   "studio_runtime_tested": false,
   "limits": [
     "No complete-plugin execution or Roblox Studio integration test",
-    "Native Windows installer tests are configured in CI; execution result is pending at this checkpoint",
     "No actual UI layout, engine audio/particles, save/export, cloning/undo, or fetched-asset runtime verification",
     "Tutorial comparison uses published chapter descriptions and source, not video playback or a transcript",
     "Interpreter limits do not validate every inherited project-import path",
@@ -144,12 +143,21 @@
     "includes_exact_candidate": true
   },
   "windows_installer_ci": {
-    "status": "pending",
+    "status": "completed",
     "runner": "windows-2022",
     "command": "python -B hardening/tests/run-windows-installer-tests.py",
     "expected_test_count": 9,
     "executes_complete_plugin": false,
-    "launches_roblox_studio": false
+    "launches_roblox_studio": false,
+    "conclusion": "success",
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "run_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135",
+    "job_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135/job/119529136130",
+    "log": "evidence/windows-installer-ci.log",
+    "included_in_focused_tests_total": false
   },
   "activation_removal": {
     "local_activation_setting_removed": true,
@@ -161,5 +169,20 @@
     "engine_mouse_activation_preserved": true
   },
   "installer_builder_sha256": "0174b8c91fbb696de9be5627ab086fd31b9487d23828b0b9ba79f586c1afab36",
-  "installer_template_sha256": "0f7ffe4df26436810113100eb40e7b0a3842926618faa741fe42200bda07d139"
+  "installer_template_sha256": "0f7ffe4df26436810113100eb40e7b0a3842926618faa741fe42200bda07d139",
+  "github_actions_verification": {
+    "status": "completed",
+    "conclusion": "success",
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "run_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135",
+    "linux_job_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135/job/119529136236",
+    "focused_tests_passed": 198,
+    "compiled_scripts": 139
+  },
+  "download_verification": {
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "http_status": 200,
+    "plugin_and_zip_match_reviewed_local_files": true,
+    "zip_contains_exact_candidate": true
+  }
 }

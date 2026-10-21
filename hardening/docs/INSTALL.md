@@ -4,7 +4,7 @@
 
 You need Roblox Studio installed. No coding, activation key, administrator access, or additional software is required.
 
-1. Download [Moon_Animator_2_Windows_Install.zip](../candidate/Moon_Animator_2_Windows_Install.zip?raw=true).
+1. Download [Moon_Animator_2_Windows_Install.zip](https://raw.githubusercontent.com/Legatto2/moon-animator/07fcce707c17f03f6a1a8059c1bace613a741e1d/hardening/candidate/Moon_Animator_2_Windows_Install.zip).
 2. In Downloads, right-click the ZIP and select **Extract All**. Open the extracted folder.
 3. Save your work and **close Roblox Studio**.
 4. Double-click **Install.cmd**. Wait for its success message, then close the installer window.
@@ -40,7 +40,7 @@ If you configured a custom plugins folder in Studio, use the manual option below
 
 ## Manual install: Windows or macOS
 
-1. Download [Moon_Animator_2_review_candidate.rbxm](../candidate/Moon_Animator_2_review_candidate.rbxm?raw=true).
+1. Download [Moon_Animator_2_review_candidate.rbxm](https://raw.githubusercontent.com/Legatto2/moon-animator/07fcce707c17f03f6a1a8059c1bace613a741e1d/hardening/candidate/Moon_Animator_2_review_candidate.rbxm).
 2. In Roblox Studio, open **Plugins → Plugins Folder**. Keep that folder open, then close Studio.
 3. Copy the downloaded `.rbxm` file into that folder.
 4. Reopen Studio and open **Moon Animator** from the Plugins toolbar/menu.
