@@ -1,0 +1,24 @@
+[
+  {
+    "baseline": "zildjibian_v34000",
+    "comparison": "befexx_unlocked",
+    "scripts_compared": 139,
+    "identical": 138,
+    "different": [
+      "Moon_Animator_2/init.luau"
+    ]
+  },
+  {
+    "baseline": "zildjibian_v34000",
+    "comparison": "befexx_newer",
+    "scripts_compared": 139,
+    "identical": 134,
+    "different": [
+      "Moon_Animator_2/Libraries/Themer.luau",
+      "Moon_Animator_2/Windows/Activate.luau",
+      "Moon_Animator_2/Windows/CharacterInserter.luau",
+      "Moon_Animator_2/Windows/MoonAnimator.luau",
+      "Moon_Animator_2/init.luau"
+    ]
+  }
+]

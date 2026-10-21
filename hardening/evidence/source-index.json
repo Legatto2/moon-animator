@@ -1,0 +1,1392 @@
+[
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Ease.luau",
+    "instance_path": "Moon Animator 2/Classes/Ease",
+    "class": "ModuleScript",
+    "referent": 103,
+    "source_bytes": 4986,
+    "sha256": "3880a6b094ecc571af90231b3250319bd0d773ff8de08a39b3fb3fffc086d31a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Button.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Button",
+    "class": "ModuleScript",
+    "referent": 36,
+    "source_bytes": 1826,
+    "sha256": "9721332291e9f99554a6cf375d5a8d9e68f954cdc849c77edd2256a47f8b06d6",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/CFrameInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/CFrameInput",
+    "class": "ModuleScript",
+    "referent": 38,
+    "source_bytes": 3553,
+    "sha256": "32084b673b2eaada94b3ccf8a9f1d3fda8788fd528cc15492bf2a2435fb0e2e9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Check.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Check",
+    "class": "ModuleScript",
+    "referent": 14,
+    "source_bytes": 1777,
+    "sha256": "0ecfb43d4f992aa155267e9f251e6a73b8daa173faae60e85bf9aadeea76f68b",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Checklist.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Checklist",
+    "class": "ModuleScript",
+    "referent": 35,
+    "source_bytes": 4633,
+    "sha256": "dae909c958b3481caa42a339810266108ff83e0f5bce043d5e293941aad18db0",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/ColorInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/ColorInput",
+    "class": "ModuleScript",
+    "referent": 16,
+    "source_bytes": 2153,
+    "sha256": "1ddc0197580e869fe7cb6f8757316da6469c7b4d7b0575eda6749c4ef03eebed",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/EaseInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/EaseInput",
+    "class": "ModuleScript",
+    "referent": 41,
+    "source_bytes": 2302,
+    "sha256": "d2affbf480a166feb8cc424b11d309fa0d2dc5ddf05304c7b9943f8cbe95f8dd",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/FileList.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/FileList",
+    "class": "ModuleScript",
+    "referent": 40,
+    "source_bytes": 4708,
+    "sha256": "3e75ce5e38e092820ff6cac67174bc666496cc343ca001aca1ff0cb85da78dbd",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Graph.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Graph",
+    "class": "ModuleScript",
+    "referent": 27,
+    "source_bytes": 4081,
+    "sha256": "f53d804056a5b450e3ef766225aa54027c7af102f192ee8cef4def9a1a965fea",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/GuiElement.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/GuiElement",
+    "class": "ModuleScript",
+    "referent": 12,
+    "source_bytes": 358,
+    "sha256": "19fa2dee6fe663693a58b15b72111694651cdb54f316b5fed15aa8df6cdb9e6d",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/ImageList.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/ImageList",
+    "class": "ModuleScript",
+    "referent": 39,
+    "source_bytes": 2707,
+    "sha256": "47b6d42b042fe48d603719639aca211572828584b792941d7f3ebc8c439b40d4",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/AngleInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/AngleInput",
+    "class": "ModuleScript",
+    "referent": 22,
+    "source_bytes": 1087,
+    "sha256": "d0da0dd871bd1fef359fd4a32fdbc8ef7d4c662e8e33a643e6072a30ce4f8327",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/ColorInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/ColorInput",
+    "class": "ModuleScript",
+    "referent": 18,
+    "source_bytes": 1579,
+    "sha256": "66fb66bf6cb7a5515ce8234840b785130cbfb6b9f88b74ddc0251417681fca54",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/InputBox.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/InputBox",
+    "class": "ModuleScript",
+    "referent": 19,
+    "source_bytes": 1570,
+    "sha256": "97eec40280611c5d698522843f43e8a026870755ddaaba54c579a6a900dadfb7",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/InstanceInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/InstanceInput",
+    "class": "ModuleScript",
+    "referent": 25,
+    "source_bytes": 1212,
+    "sha256": "58f91cbcd24ccdee9c558f811180cf7d5dcad7ebdb650a57f24dd5fd511a1b84",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/ListInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/ListInput",
+    "class": "ModuleScript",
+    "referent": 24,
+    "source_bytes": 3398,
+    "sha256": "1094c5446736fae582f07eb2ecd3ed5cf432ede7491a75b034eb7ccf43d288cb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/MultiInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/MultiInput",
+    "class": "ModuleScript",
+    "referent": 26,
+    "source_bytes": 670,
+    "sha256": "ad2e5d9d982fca726f305564fbab9f3d819713ff9be76531625bbeb2655188dd",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/NumberInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/NumberInput",
+    "class": "ModuleScript",
+    "referent": 20,
+    "source_bytes": 1399,
+    "sha256": "b1fed00d0842156928a6bd31ee05c63b70607ed4bde016222a938ee8793a0878",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/TextInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/TextInput",
+    "class": "ModuleScript",
+    "referent": 23,
+    "source_bytes": 958,
+    "sha256": "999842bc18b4c05a938d738184d1fcca9b1b9fdf7741c32300c3be98a680c7d5",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputBox/TimeInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputBox/TimeInput",
+    "class": "ModuleScript",
+    "referent": 21,
+    "source_bytes": 1978,
+    "sha256": "408183f3c79a6a4a270290d2c7c599c344da98f86b051a1359c0cee565851337",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/InputList.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/InputList",
+    "class": "ModuleScript",
+    "referent": 45,
+    "source_bytes": 4347,
+    "sha256": "1e9e9b422b3020dcaa3425f18c8a336b85159f65c935317a8e0dcbd31ceb0c40",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/KeyValueList.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/KeyValueList",
+    "class": "ModuleScript",
+    "referent": 42,
+    "source_bytes": 4360,
+    "sha256": "602f481bc4a19e936ac2c1820db9754589e0cfdb54ee20e35ca510f4e8f233a0",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/LayerSystem/ItemObject.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/ItemObject",
+    "class": "ModuleScript",
+    "referent": 31,
+    "source_bytes": 20272,
+    "sha256": "3dc2d3142e977f7d1375cc093089e4c30786ca83aff9466cff04dd2c9a7a6653",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/LayerSystem/LayerHandler.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/LayerHandler",
+    "class": "ModuleScript",
+    "referent": 32,
+    "source_bytes": 8606,
+    "sha256": "87155970f7068f70612feb15bd6f26df4b602672540b9f160602497e1bbd04e9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/LayerSystem/LayerSystem.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/LayerSystem",
+    "class": "ModuleScript",
+    "referent": 30,
+    "source_bytes": 37431,
+    "sha256": "272e052169f3e99af007e2b0dbddd0a43bf992089b5dff033bd327d6572c91f4",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/LayerSystem/PlaybackHandler.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/PlaybackHandler",
+    "class": "ModuleScript",
+    "referent": 33,
+    "source_bytes": 12969,
+    "sha256": "7499fe5d324a7999c7c160a20578f1d05175280c6d0e3a122a9d7afb8d286579",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/LayerSystem/SelectionHandler.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/SelectionHandler",
+    "class": "ModuleScript",
+    "referent": 34,
+    "source_bytes": 13914,
+    "sha256": "e09a4ea3f953b080a1ccc4d43c3041f7f0510925cd0cd8606d332a81b35c704d",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/MoonScroll.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/MoonScroll",
+    "class": "ModuleScript",
+    "referent": 43,
+    "source_bytes": 4346,
+    "sha256": "d0e1d642fc74a3609dc73a4e9f9f69c27cdc617767a922533f49d07b00173e86",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Radio.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Radio",
+    "class": "ModuleScript",
+    "referent": 11,
+    "source_bytes": 1253,
+    "sha256": "f73f08ef95351a4b446d18ede071f4ad18418c402b5d037317a207b4e4748546",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/SelectGrid.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/SelectGrid",
+    "class": "ModuleScript",
+    "referent": 44,
+    "source_bytes": 3082,
+    "sha256": "729bcbb116400a9491cfbe83cd2cc6ca6a41d1f055ea157aded45aba71e8ddc3",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Slider.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Slider",
+    "class": "ModuleScript",
+    "referent": 28,
+    "source_bytes": 1978,
+    "sha256": "f6632c934fc917130636289cd03dbd72b83f4a193ee1ab7098920d4e24115969",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/Tabs.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/Tabs",
+    "class": "ModuleScript",
+    "referent": 13,
+    "source_bytes": 1098,
+    "sha256": "93d41ee81db1c9bb8f1a76c1b7b1741413fa2c52660d9b8016835464f82fb3ce",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/ValueLabel.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/ValueLabel",
+    "class": "ModuleScript",
+    "referent": 15,
+    "source_bytes": 778,
+    "sha256": "216ec8c2e7c39987f8af5bbec11d6b4e842196bd102b4b2f2b0f486e20a29f79",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/ValueTitle.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/ValueTitle",
+    "class": "ModuleScript",
+    "referent": 46,
+    "source_bytes": 650,
+    "sha256": "41f781cb307582beffe85b5d51cc26a4add1ce622513a455af0945caf36b2092",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/GuiElement/VectorInput.luau",
+    "instance_path": "Moon Animator 2/Classes/GuiElement/VectorInput",
+    "class": "ModuleScript",
+    "referent": 37,
+    "source_bytes": 1266,
+    "sha256": "224496d4ed9891b235c7ff9a11ccfd76a4acc2887bdc17adf12a176a36c36c45",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/ActionTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/ActionTrack",
+    "class": "ModuleScript",
+    "referent": 73,
+    "source_bytes": 1610,
+    "sha256": "be744fe89652ded4d5276a58f2505ef2be852a33be35723fc8eb5ce59f103ebc",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/BasePartApplyMeshTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/BasePartApplyMeshTrack",
+    "class": "ModuleScript",
+    "referent": 94,
+    "source_bytes": 534,
+    "sha256": "391b09975468b4091965cc40952baf41ac2cc6278788c5fc6bf8177d32a51af9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/BasePartApplyTextureTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/BasePartApplyTextureTrack",
+    "class": "ModuleScript",
+    "referent": 95,
+    "source_bytes": 591,
+    "sha256": "46f95ed4e25529592a30891038b130535d7f6d8bdf698e6a8226927e4cce1956",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidAddAccessoryTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidAddAccessoryTrack",
+    "class": "ModuleScript",
+    "referent": 82,
+    "source_bytes": 521,
+    "sha256": "8fdc270ed719b60b92cd42da76c1b959c380000b3df37d2cf4b64f7c9b62c426",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidChangeStateTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidChangeStateTrack",
+    "class": "ModuleScript",
+    "referent": 83,
+    "source_bytes": 497,
+    "sha256": "000ef5d5ed6e4df78c24e46b033d51dbaa2ac057af603c81fba4c0ae5e06029d",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidEquipToolTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidEquipToolTrack",
+    "class": "ModuleScript",
+    "referent": 84,
+    "source_bytes": 518,
+    "sha256": "e869e4077bf5812afa0be0aeb7f2fbaf5ae064cc87794ad779b3784cdc89e66d",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidJumpTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidJumpTrack",
+    "class": "ModuleScript",
+    "referent": 91,
+    "source_bytes": 465,
+    "sha256": "a2b0997aba4d0ce2b9b9bdc9581513b8ea2e475636c6b59366889d42f3cb2ff3",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidMoveToTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidMoveToTrack",
+    "class": "ModuleScript",
+    "referent": 85,
+    "source_bytes": 670,
+    "sha256": "8d2b504a2baa09144720bf60d22e362f1ca59812bc78e2f2f8ec588e41c0357b",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidMoveTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidMoveTrack",
+    "class": "ModuleScript",
+    "referent": 86,
+    "source_bytes": 677,
+    "sha256": "8d4b016c780709dd69b115be99b9a970f65ee6bde941cf2c52e3d4448357dfe6",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidPlayAnimationTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidPlayAnimationTrack",
+    "class": "ModuleScript",
+    "referent": 93,
+    "source_bytes": 1454,
+    "sha256": "8d6f8990c8da6ced04e7b9cb3e36b40838a8da5b15d232339ecbdf880b029179",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidPlayEmoteTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidPlayEmoteTrack",
+    "class": "ModuleScript",
+    "referent": 90,
+    "source_bytes": 492,
+    "sha256": "c6acec893156412a86a2cd159c1fa7b11ff7cd8182ddeecc526e57dc836152b1",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidRemoveAccessoriesTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidRemoveAccessoriesTrack",
+    "class": "ModuleScript",
+    "referent": 87,
+    "source_bytes": 501,
+    "sha256": "75946e05a834299bbe94ccb0ed309cb4c26ef284d4f731c00ed5e721306e0532",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidSitTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidSitTrack",
+    "class": "ModuleScript",
+    "referent": 92,
+    "source_bytes": 440,
+    "sha256": "05e426b0367b535d3bb33dc9cb16d12cb56f6d5c123466cabb5e2ef0e587988a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidTakeDamageTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidTakeDamageTrack",
+    "class": "ModuleScript",
+    "referent": 88,
+    "source_bytes": 470,
+    "sha256": "de3815ad3e69c10661343ef6f55d45eabb0ed33a4e3c7515ebf316d7af76c147",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/HumanoidUnequipToolsTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/HumanoidUnequipToolsTrack",
+    "class": "ModuleScript",
+    "referent": 89,
+    "source_bytes": 496,
+    "sha256": "96f6989d534c599084d853226e1e0e2fa57359edd2f09f976ce86c46415f90a6",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/ParticleEmitterClearTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/ParticleEmitterClearTrack",
+    "class": "ModuleScript",
+    "referent": 75,
+    "source_bytes": 461,
+    "sha256": "42c2ed630a2a7f56907390c95339d4d7fc6c84b89f8365e8e15e45b4e0c831b9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/ParticleEmitterEmitTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/ParticleEmitterEmitTrack",
+    "class": "ModuleScript",
+    "referent": 74,
+    "source_bytes": 600,
+    "sha256": "0e20fb2858521d7844410f686403fccde89d2ca5f554227a684543aeaa7712df",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundPauseTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundPauseTrack",
+    "class": "ModuleScript",
+    "referent": 78,
+    "source_bytes": 461,
+    "sha256": "77a5e3f52073f2abbc7ee106ade8413a744c61b78e064c38c1bb8c58919eed67",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundPlayOnceTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundPlayOnceTrack",
+    "class": "ModuleScript",
+    "referent": 80,
+    "source_bytes": 599,
+    "sha256": "c2a8f4251ca410ac6089827b4127fb9a3b216d28f7dcb7e12470a308e479d287",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundPlayTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundPlayTrack",
+    "class": "ModuleScript",
+    "referent": 76,
+    "source_bytes": 460,
+    "sha256": "2398b92154633f9cdae2e675fcd7771336134486f1bcb9a8b92b70248c4fc628",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundResumeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundResumeTrack",
+    "class": "ModuleScript",
+    "referent": 79,
+    "source_bytes": 462,
+    "sha256": "34d994ac48b0ac401dcd34b435713d21849f0bcc2d62ba7ba66636749a45f9bb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundSetTimeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundSetTimeTrack",
+    "class": "ModuleScript",
+    "referent": 81,
+    "source_bytes": 473,
+    "sha256": "b52e16b6f45a882dc98ef55275192721923067ee7fcc75bdad19ad11e020de12",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Action/SoundStopTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Action/SoundStopTrack",
+    "class": "ModuleScript",
+    "referent": 77,
+    "source_bytes": 460,
+    "sha256": "98770dca711365bb8211cb4b445bea551e70b5e543cb3368f8be40b69a401cc4",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/BoneTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/BoneTrack",
+    "class": "ModuleScript",
+    "referent": 57,
+    "source_bytes": 7525,
+    "sha256": "5aec3268de89d3e56acc4a801e7ab52a8dc91cc4805ca84a711ce3679acf4163",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/DiscreteKeyframeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/DiscreteKeyframeTrack",
+    "class": "ModuleScript",
+    "referent": 71,
+    "source_bytes": 596,
+    "sha256": "adffb7d1513fc3a762e11130a2730bf74d84c9815ae069749e92fcefb14d8fde",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Divider.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Divider",
+    "class": "ModuleScript",
+    "referent": 48,
+    "source_bytes": 1730,
+    "sha256": "d3764273341100be00b3dfb6b6fe8a36443b96fdedd66bd054cfead9a82dc5af",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/KeyframeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/KeyframeTrack",
+    "class": "ModuleScript",
+    "referent": 52,
+    "source_bytes": 9140,
+    "sha256": "81820dd07e545859f9f8189a7964a6a6018f1f1ee7aa58bd5bd45e00fe0265f9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/LSIContainer.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/LSIContainer",
+    "class": "ModuleScript",
+    "referent": 53,
+    "source_bytes": 2731,
+    "sha256": "7fea43b49293d89780c4200a493d2f9a3dd4e63a6a123e7156d49c20b6d1ff96",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/LayerSystemItem.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/LayerSystemItem",
+    "class": "ModuleScript",
+    "referent": 51,
+    "source_bytes": 3332,
+    "sha256": "aa8ee13f87eab7d36bd5ba678de1d92ec52e827c289b9da46df82d7b95a93815",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/MarkerTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/MarkerTrack",
+    "class": "ModuleScript",
+    "referent": 54,
+    "source_bytes": 23488,
+    "sha256": "692ee24d91f30e35f28685a2e935f94a2932845e7946fe89ed265dfe894136b0",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/MotorTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/MotorTrack",
+    "class": "ModuleScript",
+    "referent": 56,
+    "source_bytes": 1934,
+    "sha256": "ed5348faea785e500968f1894521a5fe7ffd619a4441ee7aef9e0a0d4d11dfc0",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/ObjectLabel.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/ObjectLabel",
+    "class": "ModuleScript",
+    "referent": 49,
+    "source_bytes": 8409,
+    "sha256": "6740cc1319127319737ab7811725f5657900a8be84d9b1cc80da80832d1961c5",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/RigKeyframeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/RigKeyframeTrack",
+    "class": "ModuleScript",
+    "referent": 55,
+    "source_bytes": 2806,
+    "sha256": "e0328cc516432177d90b814310455652fd15631fc99a9e84caa9884fde4035bf",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/BasePartCFrameTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/BasePartCFrameTrack",
+    "class": "ModuleScript",
+    "referent": 68,
+    "source_bytes": 1437,
+    "sha256": "59c750666a20d46714203192d19667c675df1a6118395ac2ab882d62be9cb8dc",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/CameraAttachToPartTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/CameraAttachToPartTrack",
+    "class": "ModuleScript",
+    "referent": 59,
+    "source_bytes": 1110,
+    "sha256": "3679516c9ba6ead3bafa5f88419fc1f02602938360d6e49617f890a63c08b44a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/CameraCFrameTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/CameraCFrameTrack",
+    "class": "ModuleScript",
+    "referent": 60,
+    "source_bytes": 993,
+    "sha256": "b7f905bad6fb52063f987fa4a07e5cfef2942d26b9ec3ab7928ed55084681e5c",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/CameraLookAtPartTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/CameraLookAtPartTrack",
+    "class": "ModuleScript",
+    "referent": 61,
+    "source_bytes": 1553,
+    "sha256": "b7e907a176e05d6e663fd11c80da2968f93a9de938bf86c7218257dbbfdef448",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/LightingClockTimeTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/LightingClockTimeTrack",
+    "class": "ModuleScript",
+    "referent": 67,
+    "source_bytes": 865,
+    "sha256": "cd25ce48cec6b038206bb64bf15fd0537ad5c4c6f2cab7423bc549d1e4ab0e33",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/ModelCFrameTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/ModelCFrameTrack",
+    "class": "ModuleScript",
+    "referent": 65,
+    "source_bytes": 1769,
+    "sha256": "64549b537d981c6f7204aa874fb5a7fe202a9b9a188981a3631cef1d1ce98dbf",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/ModelColorTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/ModelColorTrack",
+    "class": "ModuleScript",
+    "referent": 70,
+    "source_bytes": 866,
+    "sha256": "6bc24b5f2df0678a5b0bd7f3e94a084984b5abaf504b0d7558968e133fd806f6",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/ModelReflectanceTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/ModelReflectanceTrack",
+    "class": "ModuleScript",
+    "referent": 63,
+    "source_bytes": 879,
+    "sha256": "88be6b7cc140fce7080973757dc2caa6bd7180d98c7a15b8c8b6457653ecaca6",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/ModelScaleTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/ModelScaleTrack",
+    "class": "ModuleScript",
+    "referent": 64,
+    "source_bytes": 1358,
+    "sha256": "884ae6e15d2d61ab62c2fecaa22baadf5dc4351191cfebe2bcedabe76976cbf0",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/ModelTransparencyTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/ModelTransparencyTrack",
+    "class": "ModuleScript",
+    "referent": 62,
+    "source_bytes": 878,
+    "sha256": "1fa05b274be80df8e82ea120ca621186400ee3f702abb8a77e8cd89756434d6f",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/RigCFrameTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/RigCFrameTrack",
+    "class": "ModuleScript",
+    "referent": 66,
+    "source_bytes": 1928,
+    "sha256": "a14f9e0475bb4f65ec5ae72dd9e284b84050036924ed713a7fb033dfb25d458c",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Special/TerrainColorTrack.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Special/TerrainColorTrack",
+    "class": "ModuleScript",
+    "referent": 69,
+    "source_bytes": 883,
+    "sha256": "b35c261d91271970866a7872305041827ed140f8424c591fa21aef54f9043b0f",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/LayerSystemItem/Track.luau",
+    "instance_path": "Moon Animator 2/Classes/LayerSystemItem/Track",
+    "class": "ModuleScript",
+    "referent": 50,
+    "source_bytes": 9505,
+    "sha256": "5ac6d50e555afb08b27223ddfe8a2b13e8344f65fcc703166848c2bbe8eeb1e0",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Menu/Menu.luau",
+    "instance_path": "Moon Animator 2/Classes/Menu/Menu",
+    "class": "ModuleScript",
+    "referent": 98,
+    "source_bytes": 4174,
+    "sha256": "ad7d50e64a41868088c983c34906ba72879501d8c1224fcb787ee5e9f854ab26",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Menu/MenuBar.luau",
+    "instance_path": "Moon Animator 2/Classes/Menu/MenuBar",
+    "class": "ModuleScript",
+    "referent": 100,
+    "source_bytes": 3775,
+    "sha256": "036d49d8d0ff1889b90a2a360426d87b7f21673c09aa69d220a1498b78574feb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Menu/MenuBarButton.luau",
+    "instance_path": "Moon Animator 2/Classes/Menu/MenuBarButton",
+    "class": "ModuleScript",
+    "referent": 101,
+    "source_bytes": 1581,
+    "sha256": "578d28e7c8541d16b0a95a8194f804b7203af8a2296e3eb1c03ecd4e6b7d2708",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Menu/MenuItem.luau",
+    "instance_path": "Moon Animator 2/Classes/Menu/MenuItem",
+    "class": "ModuleScript",
+    "referent": 99,
+    "source_bytes": 4915,
+    "sha256": "82e3a2fa2e91a91ad0029786ca530d0d5329f434b106297ef8e1ec08a8440c09",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Object.luau",
+    "instance_path": "Moon Animator 2/Classes/Object",
+    "class": "ModuleScript",
+    "referent": 96,
+    "source_bytes": 2337,
+    "sha256": "f1aec7b47329b6d39b0df2c6a93d78398055355ef1bd932d23e8e88a06416aff",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/ObjectGroup.luau",
+    "instance_path": "Moon Animator 2/Classes/ObjectGroup",
+    "class": "ModuleScript",
+    "referent": 6,
+    "source_bytes": 2859,
+    "sha256": "a1530ca4ddd05dc372ca6a7a8d44535b9859401f7959c6a3070fb7f379525578",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Path.luau",
+    "instance_path": "Moon Animator 2/Classes/Path",
+    "class": "ModuleScript",
+    "referent": 102,
+    "source_bytes": 3826,
+    "sha256": "ad1fbab73b5b6ea930c5844592fac817319a5c1dd7ab40fd3d1233f8d488b3e1",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/TrackItem/Keyframe.luau",
+    "instance_path": "Moon Animator 2/Classes/TrackItem/Keyframe",
+    "class": "ModuleScript",
+    "referent": 3,
+    "source_bytes": 16066,
+    "sha256": "5e7fec2ef382f7f35c21c14e484f85717fd18e28b8df4d28baaecd9c8860f9bc",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/TrackItem/Marker.luau",
+    "instance_path": "Moon Animator 2/Classes/TrackItem/Marker",
+    "class": "ModuleScript",
+    "referent": 5,
+    "source_bytes": 4492,
+    "sha256": "b8209e43db1b52227f3760da8cac35ba1171d2a76d6dd9efeb375d77c2de08fb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/TrackItem/TrackItem.luau",
+    "instance_path": "Moon Animator 2/Classes/TrackItem/TrackItem",
+    "class": "ModuleScript",
+    "referent": 4,
+    "source_bytes": 3896,
+    "sha256": "b794041315580c47fdaeaf325ffe56682a2e93404f8f03caf646291abf1fd8d1",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Window/Window.luau",
+    "instance_path": "Moon Animator 2/Classes/Window/Window",
+    "class": "ModuleScript",
+    "referent": 8,
+    "source_bytes": 20892,
+    "sha256": "f1fb666a12469de518f89d8e2c1e34d15ae79424c5d6f942017048d085360a09",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Classes/Window/WindowData.luau",
+    "instance_path": "Moon Animator 2/Classes/Window/WindowData",
+    "class": "ModuleScript",
+    "referent": 9,
+    "source_bytes": 503,
+    "sha256": "9b3b63aa9ca80706624624d677a8a67b4f26db3a62837368c27661770dc0f773",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/Gizmo.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/Gizmo",
+    "class": "ModuleScript",
+    "referent": 7233,
+    "source_bytes": 1497,
+    "sha256": "e0506b526f4f4dae639594f2a24c73210635f5576d65599fc329a882f286eeee",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/Gizmos.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/Gizmos",
+    "class": "ModuleScript",
+    "referent": 7234,
+    "source_bytes": 8885,
+    "sha256": "734379589790254c0c2d76432dad687ff827367c7c5001d50ee029f3e2d511c2",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/PositionGizmos.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/PositionGizmos",
+    "class": "ModuleScript",
+    "referent": 7235,
+    "source_bytes": 4009,
+    "sha256": "8c8fb957920bd9175d9935051a6a425914ccc89736ae7f28b847395c56b81f1c",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/PositionGizmos/PositionGizmo.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/PositionGizmos/PositionGizmo",
+    "class": "ModuleScript",
+    "referent": 7236,
+    "source_bytes": 2748,
+    "sha256": "f1ed830e0424ce72cbbe998a28c82d026d134ea9d01290d69f579224f79ce063",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/RotationGizmos.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/RotationGizmos",
+    "class": "ModuleScript",
+    "referent": 7290,
+    "source_bytes": 7351,
+    "sha256": "e8b5959bd98e9ec8bd61a77f6eb284e31c232b541bd45c648c307e378954f0f7",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/RotationGizmos/RotationGizmo.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/RotationGizmos/RotationGizmo",
+    "class": "ModuleScript",
+    "referent": 7291,
+    "source_bytes": 3397,
+    "sha256": "493cbc9c8aa2096e0312091f3b5329ff0f9e2030e558832ffb783db417cbea21",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/Signal.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/Signal",
+    "class": "ModuleScript",
+    "referent": 7349,
+    "source_bytes": 1771,
+    "sha256": "77d2b3f06558b90f6835a07e57f9a65b555f4adc87fc153be3cebac4b7001cfa",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/KojoGizmos/Signal/Connection.luau",
+    "instance_path": "Moon Animator 2/KojoGizmos/Signal/Connection",
+    "class": "ModuleScript",
+    "referent": 7350,
+    "source_bytes": 460,
+    "sha256": "d2a6e804d299c45409626cd5f212c9f90dda4cabc4a1f7421447122ed0adf5f7",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/ClickOff.luau",
+    "instance_path": "Moon Animator 2/Libraries/ClickOff",
+    "class": "ModuleScript",
+    "referent": 542,
+    "source_bytes": 2108,
+    "sha256": "7473f1dbb71dbcf648fe5a6717db2bdbea37ab06f16e85bc17e99b8459e7e900",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/EasingFunctions.luau",
+    "instance_path": "Moon Animator 2/Libraries/EasingFunctions",
+    "class": "ModuleScript",
+    "referent": 545,
+    "source_bytes": 11201,
+    "sha256": "f721644ad9c85b34443c2041791a9e27ea8e36c23159314fa97cb94d53881f19",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/Files.luau",
+    "instance_path": "Moon Animator 2/Libraries/Files",
+    "class": "ModuleScript",
+    "referent": 544,
+    "source_bytes": 1764,
+    "sha256": "b621877c209f58d3981d7225252d8d6f30885b6f3f1f2230f6cfd094effe71f9",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/GuiLib.luau",
+    "instance_path": "Moon Animator 2/Libraries/GuiLib",
+    "class": "ModuleScript",
+    "referent": 546,
+    "source_bytes": 8905,
+    "sha256": "1f8015a901633e6a6c4daa4d84524ab499e4524d02559f3491535ad67e950e2d",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/Input.luau",
+    "instance_path": "Moon Animator 2/Libraries/Input",
+    "class": "ModuleScript",
+    "referent": 539,
+    "source_bytes": 7620,
+    "sha256": "ebeabf724b962512ad98fc97a8daa5d185b14e57ce3c3865bb97ef713170e08c",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/ItemTable.luau",
+    "instance_path": "Moon Animator 2/Libraries/ItemTable",
+    "class": "ModuleScript",
+    "referent": 541,
+    "source_bytes": 25498,
+    "sha256": "17d1c76867982f74d6235b29c53bda43ffcfd48772bfd0705d93a7677a41e2a5",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/MASConvert.luau",
+    "instance_path": "Moon Animator 2/Libraries/MASConvert",
+    "class": "ModuleScript",
+    "referent": 548,
+    "source_bytes": 22468,
+    "sha256": "231fa6fae339b51c0664bcc7977ce66637163110dab4c5c24341eeafbdb080b1",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/PartHandles.luau",
+    "instance_path": "Moon Animator 2/Libraries/PartHandles",
+    "class": "ModuleScript",
+    "referent": 547,
+    "source_bytes": 3671,
+    "sha256": "276bdbb1b7aa658487fa3215979f90ccec3ccea5173aa2085ca8da9eaeea9bac",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/Themer.luau",
+    "instance_path": "Moon Animator 2/Libraries/Themer",
+    "class": "ModuleScript",
+    "referent": 540,
+    "source_bytes": 11847,
+    "sha256": "1583ac5c74c75e34dbe0278886d41b6c709bb1e6f97c2a71850daaa0333e9b86",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Libraries/Toggles.luau",
+    "instance_path": "Moon Animator 2/Libraries/Toggles",
+    "class": "ModuleScript",
+    "referent": 543,
+    "source_bytes": 1973,
+    "sha256": "00d971ce5992eef42fa71e1bcaebdd7848a152ed8d9ab8e9831099adb3272f77",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/Activate.luau",
+    "instance_path": "Moon Animator 2/Windows/Activate",
+    "class": "ModuleScript",
+    "referent": 1215,
+    "source_bytes": 3114,
+    "sha256": "90db0f72d810199a6154c387863d8c2a14214d7dca992d1e88d8272dbd6d3812",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/AddItem.luau",
+    "instance_path": "Moon Animator 2/Windows/AddItem",
+    "class": "ModuleScript",
+    "referent": 1009,
+    "source_bytes": 4072,
+    "sha256": "511cdfdfec43f9e7b8f0eb31730d61216d5962c45f0a530289b9c12825914f78",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/AnimationSettings.luau",
+    "instance_path": "Moon Animator 2/Windows/AnimationSettings",
+    "class": "ModuleScript",
+    "referent": 1412,
+    "source_bytes": 2283,
+    "sha256": "bb1d2c278bcead4ced9ebd617c097602cb9c113b380c60c69849e74771935d1a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/CameraRef.luau",
+    "instance_path": "Moon Animator 2/Windows/CameraRef",
+    "class": "ModuleScript",
+    "referent": 2557,
+    "source_bytes": 1263,
+    "sha256": "3362c0177febe6017168008f8111d9c7863d8636b8b57860588a975c19c20719",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/CameraRotation.luau",
+    "instance_path": "Moon Animator 2/Windows/CameraRotation",
+    "class": "ModuleScript",
+    "referent": 1601,
+    "source_bytes": 1392,
+    "sha256": "5b978e6b30517cdbcc0bdcf27a20f99a898de20107ebff886850d6a0cc44d3a2",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/CharacterInserter.luau",
+    "instance_path": "Moon Animator 2/Windows/CharacterInserter",
+    "class": "ModuleScript",
+    "referent": 1244,
+    "source_bytes": 18339,
+    "sha256": "160cbbf130d6e169495ee2cc6388c86aef64795654619850942da7ec6bc9b79a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/ColorPicker.luau",
+    "instance_path": "Moon Animator 2/Windows/ColorPicker",
+    "class": "ModuleScript",
+    "referent": 2135,
+    "source_bytes": 5521,
+    "sha256": "6435d66e7ad491f99dc66b5b3120cecee549fa9bb40b909e58ed7aca5dff9407",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/EditItem.luau",
+    "instance_path": "Moon Animator 2/Windows/EditItem",
+    "class": "ModuleScript",
+    "referent": 1072,
+    "source_bytes": 2684,
+    "sha256": "94c597919df149ba5869203d004552369688db195978d3493a010770e0b30edc",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/EditKeyframes_Ease.luau",
+    "instance_path": "Moon Animator 2/Windows/EditKeyframes_Ease",
+    "class": "ModuleScript",
+    "referent": 2016,
+    "source_bytes": 7317,
+    "sha256": "61f4ac22303666c03958027c030ff2403ab5f4dea0caa4ca9affc66818894eea",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/EditKeyframes_Value.luau",
+    "instance_path": "Moon Animator 2/Windows/EditKeyframes_Value",
+    "class": "ModuleScript",
+    "referent": 1659,
+    "source_bytes": 8362,
+    "sha256": "1dcb2d8117720a195466cbc56e4807fd0039bcaf412afc51721db9c5b33af8a1",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/EditMarkers.luau",
+    "instance_path": "Moon Animator 2/Windows/EditMarkers",
+    "class": "ModuleScript",
+    "referent": 2209,
+    "source_bytes": 12803,
+    "sha256": "48268d9323d500208c7df2d1824c69c36c7a6046ab0c0f85a53d1fb99d7b80ce",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/EditTheme.luau",
+    "instance_path": "Moon Animator 2/Windows/EditTheme",
+    "class": "ModuleScript",
+    "referent": 1479,
+    "source_bytes": 3158,
+    "sha256": "025b703763deb8d5462e80ae8acf8ce717cdac3c065d7281068470f100b88de1",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/ExportFiles.luau",
+    "instance_path": "Moon Animator 2/Windows/ExportFiles",
+    "class": "ModuleScript",
+    "referent": 2604,
+    "source_bytes": 1166,
+    "sha256": "197af9fc3917b6205d2905913e0754608cee3798468b200234e4e5e0562dc86f",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/FillFrames.luau",
+    "instance_path": "Moon Animator 2/Windows/FillFrames",
+    "class": "ModuleScript",
+    "referent": 2308,
+    "source_bytes": 4342,
+    "sha256": "9077e66052c47f8918d5de1ce6e953e7ab95feae9a5fcb29c98d460c06cdfef4",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/FrameOffset.luau",
+    "instance_path": "Moon Animator 2/Windows/FrameOffset",
+    "class": "ModuleScript",
+    "referent": 1900,
+    "source_bytes": 786,
+    "sha256": "a5211cab5902afa1148adac4b5f209ac570f196a6eebe499a2d7c90c594fcf24",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/IdImport.luau",
+    "instance_path": "Moon Animator 2/Windows/IdImport",
+    "class": "ModuleScript",
+    "referent": 2647,
+    "source_bytes": 3486,
+    "sha256": "5edc50aadf7353ce56a3369d2945c1b9ab9a48a26a727835bdd4c41a8d70d7ed",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/Import.luau",
+    "instance_path": "Moon Animator 2/Windows/Import",
+    "class": "ModuleScript",
+    "referent": 900,
+    "source_bytes": 4991,
+    "sha256": "02c98b70af67f7e10062e7e30008ca45cbfa87b740de27bbe4f2c7aef406f900",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/JumpToItem.luau",
+    "instance_path": "Moon Animator 2/Windows/JumpToItem",
+    "class": "ModuleScript",
+    "referent": 1637,
+    "source_bytes": 1929,
+    "sha256": "abee34ee2d6e013dc767cff02546db910d6575fe126b5ec2f18863507bbe6e54",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/MoonAnimator.luau",
+    "instance_path": "Moon Animator 2/Windows/MoonAnimator",
+    "class": "ModuleScript",
+    "referent": 550,
+    "source_bytes": 112915,
+    "sha256": "862d1809e0a133e8d6826f13df59218a1ae651931c79e49e7c54b71bbb5a4ebb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/MsgBox.luau",
+    "instance_path": "Moon Animator 2/Windows/MsgBox",
+    "class": "ModuleScript",
+    "referent": 1384,
+    "source_bytes": 1485,
+    "sha256": "fe596eaa50b4821b3710d3fd3e60d7c83df21857fd98ab2fd408ee57dce9fe83",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/RepeatFrames.luau",
+    "instance_path": "Moon Animator 2/Windows/RepeatFrames",
+    "class": "ModuleScript",
+    "referent": 2515,
+    "source_bytes": 2527,
+    "sha256": "fb811217f0ed39478c1d28e84e15963653f51100272aeeca923af601845fd2cb",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/SaveAs.luau",
+    "instance_path": "Moon Animator 2/Windows/SaveAs",
+    "class": "ModuleScript",
+    "referent": 2582,
+    "source_bytes": 1658,
+    "sha256": "fac4870bedeca5ff173933bfca32ba71f130701f6e61dc667701e9f37aeb00ce",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/SplitKFVal.luau",
+    "instance_path": "Moon Animator 2/Windows/SplitKFVal",
+    "class": "ModuleScript",
+    "referent": 2625,
+    "source_bytes": 747,
+    "sha256": "83eb2fe7dcd2880824ff7ed6234212a463c3f7c7de5280208bd3417f922b07dd",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/StretchFrames.luau",
+    "instance_path": "Moon Animator 2/Windows/StretchFrames",
+    "class": "ModuleScript",
+    "referent": 861,
+    "source_bytes": 2305,
+    "sha256": "1abd91dbf2ee40414b8f512d6e929bc8c870a9ccc7b2d2cb6fb694ea4239d361",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/Supporters.luau",
+    "instance_path": "Moon Animator 2/Windows/Supporters",
+    "class": "ModuleScript",
+    "referent": 2669,
+    "source_bytes": 649,
+    "sha256": "1accecebc8472323577346c1c6d2b2c0ab6198adced178df1b76c6515a7aa6ae",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/Ungroup.luau",
+    "instance_path": "Moon Animator 2/Windows/Ungroup",
+    "class": "ModuleScript",
+    "referent": 1135,
+    "source_bytes": 3153,
+    "sha256": "a6b144122a3f11dbf2eddb21e45e4a97bd1c88f31475db1e4ee3d4316b90332a",
+    "changed": false,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/Windows/Welder.luau",
+    "instance_path": "Moon Animator 2/Windows/Welder",
+    "class": "ModuleScript",
+    "referent": 1922,
+    "source_bytes": 9016,
+    "sha256": "f42952dc8303e27921d2d944a383c50d740fbecfb7ca9178b8803b5ae0e0daaa",
+    "changed": true,
+    "compile_passed": true
+  },
+  {
+    "file": "reviewed-sources/Moon_Animator_2/init.luau",
+    "instance_path": "Moon Animator 2/init",
+    "class": "LocalScript",
+    "referent": 2679,
+    "source_bytes": 33122,
+    "sha256": "f1b90ebd4bc759ed4932c24ad9397f4a384762c1c88816a20d8b65606c56b551",
+    "changed": false,
+    "compile_passed": true
+  }
+]

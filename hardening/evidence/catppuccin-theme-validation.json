@@ -1,0 +1,69 @@
+{
+  "commit": "7541ad7e017c3447cf53f0c4b79ee2963fe7528b",
+  "themes": [
+    {
+      "flavor": "latte",
+      "upstream_url": "https://github.com/catppuccin/moon-animator-2/blob/7541ad7e017c3447cf53f0c4b79ee2963fe7528b/themes/latte.json",
+      "upstream_git_blob": "eda7a0e3cc2cb8ae0feb91836fbab79c3cb61096",
+      "keys": [
+        "bg",
+        "highlight",
+        "main",
+        "second",
+        "text",
+        "third"
+      ],
+      "rgb_components_checked": 18,
+      "valid_rgb_data": true,
+      "urls_or_executable_fields": false
+    },
+    {
+      "flavor": "frappe",
+      "upstream_url": "https://github.com/catppuccin/moon-animator-2/blob/7541ad7e017c3447cf53f0c4b79ee2963fe7528b/themes/frappe.json",
+      "upstream_git_blob": "97bf8864abe37303c6d3c998ccba280fb6e8491b",
+      "keys": [
+        "bg",
+        "highlight",
+        "main",
+        "second",
+        "text",
+        "third"
+      ],
+      "rgb_components_checked": 18,
+      "valid_rgb_data": true,
+      "urls_or_executable_fields": false
+    },
+    {
+      "flavor": "macchiato",
+      "upstream_url": "https://github.com/catppuccin/moon-animator-2/blob/7541ad7e017c3447cf53f0c4b79ee2963fe7528b/themes/macchiato.json",
+      "upstream_git_blob": "157bec0bfe1a84926495a2bc4b92a030c9f97fa8",
+      "keys": [
+        "bg",
+        "highlight",
+        "main",
+        "second",
+        "text",
+        "third"
+      ],
+      "rgb_components_checked": 18,
+      "valid_rgb_data": true,
+      "urls_or_executable_fields": false
+    },
+    {
+      "flavor": "mocha",
+      "upstream_url": "https://github.com/catppuccin/moon-animator-2/blob/7541ad7e017c3447cf53f0c4b79ee2963fe7528b/themes/mocha.json",
+      "upstream_git_blob": "0ae81becbc086a312a929540aff2184f4a708c8d",
+      "keys": [
+        "bg",
+        "highlight",
+        "main",
+        "second",
+        "text",
+        "third"
+      ],
+      "rgb_components_checked": 18,
+      "valid_rgb_data": true,
+      "urls_or_executable_fields": false
+    }
+  ]
+}

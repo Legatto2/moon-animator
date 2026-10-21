@@ -1,0 +1,120 @@
+{
+  "review_date": "2026-10-21",
+  "repository": "https://github.com/Legatto2/moon-animator",
+  "base_commit": "69b88295776351b5aec1cdff783bb12a194daf43",
+  "candidate_file": "candidate/Moon_Animator_2_review_candidate.rbxm",
+  "candidate_sha256": "1ebe0f1a0464a469ea0bbefbe68f62e0f0cd98b3afbe4aba9893c0717dc0524b",
+  "candidate_bytes": 896915,
+  "verification_command": "python -B hardening/verify.py --luau-dir /path/to/luau-tools",
+  "verification_log": "evidence/verification.log",
+  "focused_tests_total": 167,
+  "builder_regression_tests": {
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0,
+    "input_hash_pinned": true
+  },
+  "behavior_tests": {
+    "marker": {
+      "command": "python tests/run-marker-track-tests.py --luau /path/to/luau",
+      "passed": 33,
+      "failed": 0,
+      "roblox_apis_mocked": true
+    },
+    "theme": {
+      "command": "python tests/theme-run-tests.py --luau /path/to/luau",
+      "passed": 68,
+      "failed": 0,
+      "roblox_apis_mocked": true
+    },
+    "editor": {
+      "command": "python tests/run-edit-markers-tests.py --luau /path/to/luau",
+      "passed": 38,
+      "failed": 0,
+      "roblox_apis_mocked": true
+    },
+    "playback": {
+      "command": "python tests/run-playback-handler-tests.py --luau /path/to/luau",
+      "passed": 4,
+      "failed": 0,
+      "roblox_apis_mocked": true
+    },
+    "welder": {
+      "command": "python tests/run-welder-tests.py --luau /path/to/luau",
+      "passed": 11,
+      "failed": 0,
+      "roblox_apis_mocked": true
+    }
+  },
+  "baseline_reproductions": {
+    "default_lunar_rgb_errors": 2,
+    "empty_container_welder_error": 1,
+    "included_in_focused_total": false
+  },
+  "compiler": {
+    "name": "Official Luau CLI",
+    "version": "0.743",
+    "release": "https://github.com/luau-lang/luau/releases/tag/0.743",
+    "linux_zip_sha256": "99d45afb4afaee00ba631c526c8e8c76c67b60f6f119953ce6409be6d6953663",
+    "mode": "luau-compile --null",
+    "scripts_checked": 139,
+    "passed": 139,
+    "failed": 0,
+    "executes_complete_plugin": false
+  },
+  "source_validation": {
+    "original_139_hashes_match_prior_independent_extraction": true,
+    "all_candidate_sources_match_reviewed_snapshots": true,
+    "changed_scripts": [
+      "Moon_Animator_2/Classes/GuiElement/LayerSystem/PlaybackHandler.luau",
+      "Moon_Animator_2/Classes/LayerSystemItem/MarkerTrack.luau",
+      "Moon_Animator_2/Libraries/Themer.luau",
+      "Moon_Animator_2/Windows/EditMarkers.luau",
+      "Moon_Animator_2/Windows/EditTheme.luau",
+      "Moon_Animator_2/Windows/Welder.luau"
+    ],
+    "unchanged_scripts": 133,
+    "loadstring_calls_in_candidate_sources": 0
+  },
+  "binary_validation": {
+    "candidate_and_manifest_match_fresh_rebuild": true,
+    "native_lz4_decoder_matches_all_compressed_payloads": true,
+    "class_count": 50,
+    "instance_count": 7351,
+    "chunk_count": 1036,
+    "changed_chunk_indices": [
+      501,
+      726,
+      727,
+      1015,
+      1016
+    ],
+    "unchanged_chunks_byte_identical": 1031,
+    "joint_instances_disconnected": 18,
+    "individual_joint_endpoints_cleared": 36,
+    "motor6d_instances_preserved": 72,
+    "preview_cameras_preserved": 2
+  },
+  "independent_source_review": {
+    "completed": true,
+    "remaining_blocking_findings": 0,
+    "resolved_findings": [
+      "Sound completion and stop/restart sequencing",
+      "Deferred editor source and end-time signals",
+      "Implicit renewal of stale approval",
+      "Cleared-source cleanup at real playback boundaries",
+      "Approved blank boundaries outside attempt throttling",
+      "Python 3.10/3.11 Windows reparse-point rejection"
+    ]
+  },
+  "builder_sha256": "1a94fb77cf81900875fd734a6e70353be66c46ac8aeae0c73842d3e4d5039733",
+  "studio_runtime_tested": false,
+  "limits": [
+    "No complete-plugin execution or Roblox Studio integration test",
+    "No current startup/version-lock verification",
+    "No actual UI layout, engine audio/particles, save/export, cloning/undo, or fetched-asset runtime verification",
+    "Tutorial comparison uses published chapter descriptions and source, not video playback or a transcript",
+    "Interpreter limits do not validate every inherited project-import path",
+    "No guarantee of complete absence of malicious behavior or defects"
+  ]
+}
