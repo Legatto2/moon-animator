@@ -1,0 +1,235 @@
+{
+  "builder": "moon-animator-pinned-candidate/1",
+  "changed_chunks": [
+    {
+      "class": "ModuleScript",
+      "index": 501,
+      "property": "Source",
+      "tag": "PROP"
+    },
+    {
+      "class": "Snap",
+      "index": 726,
+      "property": "Part0",
+      "tag": "PROP"
+    },
+    {
+      "class": "Snap",
+      "index": 727,
+      "property": "Part1",
+      "tag": "PROP"
+    },
+    {
+      "class": "Weld",
+      "index": 1015,
+      "property": "Part0",
+      "tag": "PROP"
+    },
+    {
+      "class": "Weld",
+      "index": 1016,
+      "property": "Part1",
+      "tag": "PROP"
+    }
+  ],
+  "disabled_joints": 18,
+  "joint_action": "Retain instances; set both Part0 and Part1 to null",
+  "joints": [
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/OldR15/HumanoidRootPart/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/OldR15/HumanoidRootPart",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateR6/Head",
+      "referent": 6559
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/OldR15/LeftLowerArm/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/OldR15/LeftLowerArm",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "referent": 6574
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/OldR15/RightHand/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/OldR15/RightHand",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "referent": 6591
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/OldR15/RightLowerArm/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/OldR15/RightLowerArm",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "referent": 6599
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/R6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/R6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateOldR15/RightUpperArm",
+      "referent": 6870
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/R6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/R6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateOldR15/LeftUpperArm",
+      "referent": 6871
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/R6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/R6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateOldR15/LeftHand",
+      "referent": 6872
+    },
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/R6/Left Leg/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/R6/Left Leg",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateOldR15/HumanoidRootPart",
+      "referent": 6881
+    },
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/R6/Right Leg/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/R6/Right Leg",
+      "previous_part1": "Moon Animator 2/Rigs/TemplateOldR15/HumanoidRootPart",
+      "referent": 6884
+    },
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/TemplateOldR15/HumanoidRootPart/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateOldR15/HumanoidRootPart",
+      "previous_part1": "Moon Animator 2/Rigs/R6/Head",
+      "referent": 6895
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateOldR15/LeftLowerArm/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateOldR15/LeftLowerArm",
+      "previous_part1": "Moon Animator 2/Rigs/R6/Torso",
+      "referent": 6910
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateOldR15/RightHand/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateOldR15/RightHand",
+      "previous_part1": "Moon Animator 2/Rigs/R6/Torso",
+      "referent": 6927
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateOldR15/RightLowerArm/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateOldR15/RightLowerArm",
+      "previous_part1": "Moon Animator 2/Rigs/R6/Torso",
+      "referent": 6935
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateR6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/OldR15/RightUpperArm",
+      "referent": 7210
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateR6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/OldR15/LeftUpperArm",
+      "referent": 7211
+    },
+    {
+      "class": "Weld",
+      "instance_path": "Moon Animator 2/Rigs/TemplateR6/Torso/Weld",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateR6/Torso",
+      "previous_part1": "Moon Animator 2/Rigs/OldR15/LeftHand",
+      "referent": 7212
+    },
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/TemplateR6/Left Leg/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateR6/Left Leg",
+      "previous_part1": "Moon Animator 2/Rigs/OldR15/HumanoidRootPart",
+      "referent": 7221
+    },
+    {
+      "class": "Snap",
+      "instance_path": "Moon Animator 2/Rigs/TemplateR6/Right Leg/Snap",
+      "previous_part0": "Moon Animator 2/Rigs/TemplateR6/Right Leg",
+      "previous_part1": "Moon Animator 2/Rigs/OldR15/HumanoidRootPart",
+      "referent": 7224
+    }
+  ],
+  "output": {
+    "bytes": 896915,
+    "sha256": "1ebe0f1a0464a469ea0bbefbe68f62e0f0cd98b3afbe4aba9893c0717dc0524b"
+  },
+  "schema_version": 1,
+  "script_replacements": [
+    {
+      "after_sha256": "7499fe5d324a7999c7c160a20578f1d05175280c6d0e3a122a9d7afb8d286579",
+      "before_sha256": "ea7e18e8197ba56027617d30d47b0cd5c37c194bdec00ba6bc9b772e665d435a",
+      "instance_path": "Moon Animator 2/Classes/GuiElement/LayerSystem/PlaybackHandler",
+      "path": "Moon_Animator_2/Classes/GuiElement/LayerSystem/PlaybackHandler.luau",
+      "referent": 33
+    },
+    {
+      "after_sha256": "692ee24d91f30e35f28685a2e935f94a2932845e7946fe89ed265dfe894136b0",
+      "before_sha256": "84dc280adb6ee239ffe1f1956849f73b6c56f2f40b97e5bd2b8ae4f6cdc9f263",
+      "instance_path": "Moon Animator 2/Classes/LayerSystemItem/MarkerTrack",
+      "path": "Moon_Animator_2/Classes/LayerSystemItem/MarkerTrack.luau",
+      "referent": 54
+    },
+    {
+      "after_sha256": "1583ac5c74c75e34dbe0278886d41b6c709bb1e6f97c2a71850daaa0333e9b86",
+      "before_sha256": "308a9f3a0509eb65937b7288453261d674e3087f73d40c670b956e93e449662f",
+      "instance_path": "Moon Animator 2/Libraries/Themer",
+      "path": "Moon_Animator_2/Libraries/Themer.luau",
+      "referent": 540
+    },
+    {
+      "after_sha256": "48268d9323d500208c7df2d1824c69c36c7a6046ab0c0f85a53d1fb99d7b80ce",
+      "before_sha256": "98964e8d2c017b7f2a66a15b8892deaf2ddf0c81b01016df02c4c1c3ca3bd865",
+      "instance_path": "Moon Animator 2/Windows/EditMarkers",
+      "path": "Moon_Animator_2/Windows/EditMarkers.luau",
+      "referent": 2209
+    },
+    {
+      "after_sha256": "025b703763deb8d5462e80ae8acf8ce717cdac3c065d7281068470f100b88de1",
+      "before_sha256": "296898d66766e92468a386240191ada1d9c2ebe1109270bfb59c01339c7bc56c",
+      "instance_path": "Moon Animator 2/Windows/EditTheme",
+      "path": "Moon_Animator_2/Windows/EditTheme.luau",
+      "referent": 1479
+    },
+    {
+      "after_sha256": "f42952dc8303e27921d2d944a383c50d740fbecfb7ca9178b8803b5ae0e0daaa",
+      "before_sha256": "8e5755666b3012d711eb35fd35b4895a8ef96e1662e5133fe1ae00e2b91e88fc",
+      "instance_path": "Moon Animator 2/Windows/Welder",
+      "path": "Moon_Animator_2/Windows/Welder.luau",
+      "referent": 1922
+    }
+  ],
+  "source": {
+    "bytes": 420075,
+    "commit": "69b88295776351b5aec1cdff783bb12a194daf43",
+    "filename": "Moon Animator 2 (v34000).rbxm",
+    "repository": "https://github.com/zildjibian/moon-animator",
+    "sha256": "f757db4c6dd9eb68fea11891e12ac4e8cbe776b4d6d26d1c89625c5826d23206"
+  },
+  "validation": {
+    "all_properties_match_expected": true,
+    "classes": 50,
+    "input_hash_pinned": true,
+    "instance_hierarchy_unchanged": true,
+    "instances": 7351,
+    "output_reparsed": true,
+    "scripts": 139,
+    "studio_runtime_tested": false,
+    "total_chunks": 1036,
+    "unchanged_chunks": 1031,
+    "unchanged_chunks_byte_identical": true,
+    "unchanged_scripts": 133
+  }
+}
