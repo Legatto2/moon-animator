@@ -82,7 +82,7 @@ test("nil restores Default without passing metadata as RGB", function()
 end)
 
 for _, name in {"Default", "Dark", "Lunar", "Subspace"} do
-    test("allowed built-in " .. name .. " retains callback and tween behavior", function()
+    test("built-in " .. name .. " retains callback and tween behavior", function()
         local themer, state = newThemer()
         assert(themer:SetTheme(name) == true)
         for _, color in themer.ColorList do
@@ -127,14 +127,13 @@ for name, theme in catppuccin do
         for colorName, rgb in theme do assert(colorMatches(themer._Theme[colorName], rgb)) end
         assert(state.callbacks == 1 and state.paintCalls == 1 and state.noTween == false)
     end)
-    test("Catppuccin " .. name .. " preset selects by its free built-in name", function()
+    test("Catppuccin " .. name .. " preset selects by its built-in name", function()
         local themer, state = newThemer()
         local presetName = "Catppuccin " .. name
         assert(themer:SetTheme(presetName) == true)
         for colorName, rgb in theme do assert(colorMatches(themer._Theme[colorName], rgb)) end
         assert(state.callbackTheme == themer._BuiltInThemes[presetName])
         assert(state.callbacks == 1 and state.paintCalls == 1)
-        assert(themer.theme_buttons[presetName] == nil, "A free preset must not require a price button")
     end)
 end
 
@@ -151,40 +150,27 @@ test("optional presets leave Default as the initial and reset theme", function()
     assert(themer._Theme._bgOuter[1] == "" and themer._Theme._bgOuter[4] == "Default")
 end)
 
-test("menu separator keeps original paid themes priced and Catppuccin presets free", function()
+test("theme menu lists every bundled palette exactly once", function()
     local themer = newThemer()
-    local paid = {Taiga=true, Blush=true, Blonde=true, Wheat=true, Gaia=true,
-        Ares=true, Aqua=true, Energy=true, Digital=true, Fuchsia=true}
-    local originalFree = {Default=true, Dark=true, Lunar=true, Subspace=true}
-    local seen, price, separators = {}, true, 0
-    -- Both Activate and MoonAnimator build their Price flags from this
-    -- separator; MenuItem registers entitlement buttons only for priced rows.
-    for _, name in pairs(themer.ThemeList) do
+    local seen, count, separators = {}, 0, 0
+    for _, name in ipairs(themer.ThemeList) do
         if name == "~" then
-            price = false
             separators += 1
         else
             assert(not seen[name], "Duplicate menu theme")
+            assert(themer._BuiltInThemes[name], "Menu theme has no bundled palette")
             seen[name] = true
-            if paid[name] then
-                assert(price, "An original paid theme moved into the free menu section")
-            else
-                assert(not price, "A free theme moved into the paid menu section")
-                assert(originalFree[name] or catppuccin[string.sub(name, 12)], "Unexpected free theme")
-            end
+            count += 1
         end
     end
-    assert(separators == 1)
-    for name in paid do assert(seen[name], "Missing original paid theme") end
-    for name in originalFree do assert(seen[name], "Missing original free theme") end
-    for name in catppuccin do assert(seen["Catppuccin " .. name], "Missing Catppuccin preset") end
+    assert(separators == 1 and count == 18)
+    for name in pairs(themer._BuiltInThemes) do assert(seen[name], "Missing bundled theme") end
 end)
 
-test("selecting free presets does not grant original paid theme entitlements", function()
+test("all bundled themes work without registration or unlock state", function()
     local themer = newThemer()
-    for name in catppuccin do assert(themer:SetTheme("Catppuccin " .. name) == true) end
-    for _, name in {"Taiga", "Blush", "Blonde", "Wheat", "Gaia", "Ares", "Aqua", "Energy", "Digital", "Fuchsia"} do
-        assert(themer:SetTheme(name) == false)
+    for _, name in ipairs(themer.ThemeList) do
+        if name ~= "~" then assert(themer:SetTheme(name) == true, "Unavailable bundled theme: " .. name) end
     end
 end)
 
@@ -211,24 +197,27 @@ test("Lunar keeps all four background fields", function()
 end)
 
 for _, name in {"Taiga", "Blush", "Blonde", "Wheat", "Gaia", "Ares", "Aqua", "Energy", "Digital", "Fuchsia"} do
-    test("unavailable named theme " .. name .. " remains unavailable", function()
+    test("previously gated theme " .. name .. " applies immediately", function()
         local themer, state, globals = newThemer()
-        local previousMain = themer._Theme.main
-        assert(themer:SetTheme(name) == false)
-        assert(themer._Theme.main == previousMain and state.paintCalls == 0 and state.callbacks == 0)
-        assert(globals.Mouse.Icon == "original-cursor")
+        assert(themer:SetTheme(name) == true)
+        for _, color in themer.ColorList do
+            assert(colorMatches(themer._Theme[color[1]], themer._BuiltInThemes[name][color[1]]))
+        end
+        assert(state.paintCalls == 1 and state.callbacks == 1 and state.noTween == false)
+        assert(state.callbackTheme == themer._BuiltInThemes[name] and globals.Mouse.Icon == "")
     end)
 end
 
-test("existing AddTheme registration still activates deferred selection", function()
-    local themer, state = newThemer()
-    local button = {price_frame = {Icon = {}, Label = {}}}
-    themer.theme_buttons.Taiga = {button}
-    assert(themer:SetTheme("Taiga") == false)
-    themer:AddTheme("Taiga")
+test("unknown names reject atomically and do not defer a future selection", function()
+    local themer, state, globals = newThemer()
+    local previousMain = themer._Theme.main
+    local applied, message = themer:SetTheme("not-a-bundled-theme")
+    assert(applied == false and type(message) == "string" and #message > 0)
+    assert(themer._Theme.main == previousMain and state.paintCalls == 0 and state.callbacks == 0)
+    assert(globals.Mouse.Icon == "original-cursor")
+    assert(themer:SetTheme("Taiga") == true)
     assert(colorMatches(themer._Theme.main, themer._BuiltInThemes.Taiga.main))
-    assert(state.paintCalls == 1 and state.callbacks == 1 and state.noTween == false)
-    assert(button.price_frame.Icon.TextTransparency == 1 and button.price_frame.Label.TextTransparency == 1)
+    assert(state.paintCalls == 1 and state.callbacks == 1)
 end)
 
 local malformed = {

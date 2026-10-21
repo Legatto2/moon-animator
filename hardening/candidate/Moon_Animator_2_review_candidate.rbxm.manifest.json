@@ -2,6 +2,12 @@
   "builder": "moon-animator-pinned-candidate/1",
   "changed_chunks": [
     {
+      "class": "LocalScript",
+      "index": 408,
+      "property": "Source",
+      "tag": "PROP"
+    },
+    {
       "class": "ModuleScript",
       "index": 501,
       "property": "Source",
@@ -163,8 +169,8 @@
     }
   ],
   "output": {
-    "bytes": 896915,
-    "sha256": "1ebe0f1a0464a469ea0bbefbe68f62e0f0cd98b3afbe4aba9893c0717dc0524b"
+    "bytes": 910412,
+    "sha256": "bc87d948e6678a6e050a834f3f69ea23b1f8b0340926589b7d8794a7fb14a37b"
   },
   "schema_version": 1,
   "script_replacements": [
@@ -183,11 +189,25 @@
       "referent": 54
     },
     {
-      "after_sha256": "1583ac5c74c75e34dbe0278886d41b6c709bb1e6f97c2a71850daaa0333e9b86",
+      "after_sha256": "14fb17c498b585d9afc8006edff9d298df3e2e566d92b167eab0a15505c8c8a5",
+      "before_sha256": "82e3a2fa2e91a91ad0029786ca530d0d5329f434b106297ef8e1ec08a8440c09",
+      "instance_path": "Moon Animator 2/Classes/Menu/MenuItem",
+      "path": "Moon_Animator_2/Classes/Menu/MenuItem.luau",
+      "referent": 99
+    },
+    {
+      "after_sha256": "1ce32bd6829f9e58843b74002c71a40ef14c7c90e294c3a1f5d6488fce463adc",
       "before_sha256": "308a9f3a0509eb65937b7288453261d674e3087f73d40c670b956e93e449662f",
       "instance_path": "Moon Animator 2/Libraries/Themer",
       "path": "Moon_Animator_2/Libraries/Themer.luau",
       "referent": 540
+    },
+    {
+      "after_sha256": "26ed27e6226d671e0e13470e31e830af9092b6ebb0378637a12af9c3f8a4ab12",
+      "before_sha256": "90db0f72d810199a6154c387863d8c2a14214d7dca992d1e88d8272dbd6d3812",
+      "instance_path": "Moon Animator 2/Windows/Activate",
+      "path": "Moon_Animator_2/Windows/Activate.luau",
+      "referent": 1215
     },
     {
       "after_sha256": "48268d9323d500208c7df2d1824c69c36c7a6046ab0c0f85a53d1fb99d7b80ce",
@@ -204,11 +224,25 @@
       "referent": 1479
     },
     {
+      "after_sha256": "6cccd35eed51e37bb7c1ce31480745d204849c6c63292e8b01c1e2584151d76b",
+      "before_sha256": "862d1809e0a133e8d6826f13df59218a1ae651931c79e49e7c54b71bbb5a4ebb",
+      "instance_path": "Moon Animator 2/Windows/MoonAnimator",
+      "path": "Moon_Animator_2/Windows/MoonAnimator.luau",
+      "referent": 550
+    },
+    {
       "after_sha256": "f42952dc8303e27921d2d944a383c50d740fbecfb7ca9178b8803b5ae0e0daaa",
       "before_sha256": "8e5755666b3012d711eb35fd35b4895a8ef96e1662e5133fe1ae00e2b91e88fc",
       "instance_path": "Moon Animator 2/Windows/Welder",
       "path": "Moon_Animator_2/Windows/Welder.luau",
       "referent": 1922
+    },
+    {
+      "after_sha256": "a44b3f6c77aeec3a554fdbca8b68886b15cdfff4766fcc736e7d7402f6fd9fe8",
+      "before_sha256": "f1b90ebd4bc759ed4932c24ad9397f4a384762c1c88816a20d8b65606c56b551",
+      "instance_path": "Moon Animator 2/init",
+      "path": "Moon_Animator_2/init.luau",
+      "referent": 2679
     }
   ],
   "source": {
@@ -228,8 +262,8 @@
     "scripts": 139,
     "studio_runtime_tested": false,
     "total_chunks": 1036,
-    "unchanged_chunks": 1031,
+    "unchanged_chunks": 1030,
     "unchanged_chunks_byte_identical": true,
-    "unchanged_scripts": 133
+    "unchanged_scripts": 129
   }
 }

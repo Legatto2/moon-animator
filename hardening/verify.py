@@ -19,6 +19,7 @@ import tempfile
 
 sys.dont_write_bytecode = True
 import build_candidate as builder
+import build_install_package as installer
 
 
 ROOT = Path(__file__).resolve().parent
@@ -54,22 +55,26 @@ def find_luau_tool(directory: Path, name: str) -> Path:
 
 
 def run_focused_tests(luau: Path, environment: dict[str, str]) -> dict[str, int]:
-    output = run(
-        [sys.executable, "-B", "-m", "unittest", "discover", "-s", str(ROOT / "tests"),
-         "-p", "test_build_candidate.py", "-v"],
-        "Builder tests", environment,
-    )
-    match = re.search(r"^Ran (\d+) tests? in ", output, re.MULTILINE)
-    require(match is not None and int(match.group(1)) > 0,
-            "Builder tests did not report a nonempty test run")
-    require(re.search(r"^OK$", output, re.MULTILINE) is not None,
-            "Builder tests must all pass without skips; inspect the test environment")
-    counts = {"builder": int(match.group(1))}
-    print(f"PASS builder tests: {counts['builder']}", flush=True)
+    counts = {}
+    for name, test_file in (("builder", "test_build_candidate.py"),
+                            ("installer_package", "test_install_package.py")):
+        output = run(
+            [sys.executable, "-B", "-m", "unittest", "discover", "-s", str(ROOT / "tests"),
+             "-p", test_file, "-v"],
+            f"{name} tests", environment,
+        )
+        match = re.search(r"^Ran (\d+) tests? in ", output, re.MULTILINE)
+        require(match is not None and int(match.group(1)) > 0,
+                f"{name} tests did not report a nonempty test run")
+        require(re.search(r"^OK$", output, re.MULTILINE) is not None,
+                f"{name} tests must all pass without skips; inspect the test environment")
+        counts[name] = int(match.group(1))
+        print(f"PASS {name} tests: {counts[name]}", flush=True)
 
     for name, runner in (
         ("marker", "run-marker-track-tests.py"),
         ("theme", "theme-run-tests.py"),
+        ("startup", "run-startup-tests.py"),
         ("editor", "run-edit-markers-tests.py"),
         ("playback", "run-playback-handler-tests.py"),
         ("welder", "run-welder-tests.py"),
@@ -119,6 +124,11 @@ def verify_candidate(source: bytes, compiler: Path, environment: dict[str, str])
             require(actual == generated.read_bytes(),
                     f"Committed {generated.name} differs from a fresh rebuild")
         print("PASS rebuilt candidate and manifest match committed files byte-for-byte", flush=True)
+
+        committed_zip = builder.read_bounded_file(
+            ROOT / "candidate" / installer.PACKAGE_NAME, installer.MAX_PACKAGE_BYTES)
+        installer.verify_package(committed_zip, candidate)
+        print("PASS Windows installation ZIP matches a fresh deterministic package byte-for-byte", flush=True)
 
         sources = builder.extract_script_sources(candidate)
         require(len(sources) == builder.EXPECTED_SCRIPTS, "Extracted script inventory differs from the pinned model")
@@ -170,11 +180,12 @@ def main(argv: list[str] | None = None) -> int:
         environment["PYTHONDONTWRITEBYTECODE"] = "1"
         counts = run_focused_tests(luau, environment)
         scripts = verify_candidate(source, compiler, environment)
-    except (VerificationError, builder.BuildError, OSError) as exc:
+    except (VerificationError, builder.BuildError, installer.PackageError, OSError) as exc:
         print(f"Verification failed: {exc}", file=sys.stderr)
         return 1
     print(f"Verification passed: {sum(counts.values())} focused tests; {scripts} scripts compiled.")
     print("Roblox Studio integration has not been tested.")
+    print("Native Windows installer tests run separately in the Windows CI job.")
     return 0
 
 

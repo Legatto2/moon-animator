@@ -1,4 +1,6 @@
 *.rbxm binary
+*.zip binary
+*.cmd.in text eol=lf
 *.luau text eol=lf
 *.py text eol=lf
 *.json text eol=lf

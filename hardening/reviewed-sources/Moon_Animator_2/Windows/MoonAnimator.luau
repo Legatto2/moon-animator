@@ -120,7 +120,7 @@ local _g = _G.MoonGlobal
 			"~",
 			{"other", "Other"},
 			other = {
-				{"OpenActivate", "EULA..."},
+				{"OpenActivate", "Credits & terms..."},
 				{"OpenEditTheme", "Edit Theme..."},
 				{"version", "!V"..tostring(_g.ver)},
 			},
@@ -131,13 +131,11 @@ local _g = _G.MoonGlobal
 	}
 
 	local cur_list = FILE_MENU.h_theme
-	local price = true
 	for _, theme in pairs(_g.Themer.ThemeList) do
 		if theme == "~" then
 			table.insert(cur_list, "~")
-			price = false
 		else
-			table.insert(cur_list, {"Theme_"..theme, theme, extra = {NoClickOff = true, Price = price}})
+			table.insert(cur_list, {"Theme_"..theme, theme, extra = {NoClickOff = true}})
 		end
 	end
 
@@ -808,7 +806,7 @@ do
 	
 	local support_data = {
 		Voldex = {"Voldex", 13912834315, "Supported by Voldex!\n\n@VoldexGames"},
-		Themes = {"Moon Animator Themes", 13913165611, "Buy themes to support Moon Animator!\n\n@xsixx"},
+		Themes = {"Moon Animator Themes", 13913165611, "All bundled themes are available in this fork.\n\nOriginal Moon Animator author: @xsixx"},
 	}
 	
 	Win:AddPaintedItem(RigSelLabel, {TextColor3 = "highlight"})

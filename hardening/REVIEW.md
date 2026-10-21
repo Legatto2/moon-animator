@@ -138,8 +138,10 @@ The plugin models are unofficial modified distributions. The repositories do
 not provide an authenticated comparison with the original author's current
 release. Catppuccin's MIT license covers its theme project and should not be
 read as a license for Moon Animator's engine. The hardening candidate retains
-the baseline's credits, activation/theme entitlement logic, and embedded
-terms.
+the baseline's credits and embedded terms. At the user's request, the legacy
+local activation flow, remote version/UI restriction, and named-theme locks
+have been removed. This is a description of runtime behavior, not a grant of
+new rights to the inherited engine.
 
 ## Reliability findings and fixes
 
@@ -157,17 +159,58 @@ RGB values must be finite numbers from 0 through 255. Background opacity must
 be finite from 0 through 1, and enum names must be recognized. The editor now
 reports rejected imports rather than declaring success.
 
-The original four free themes, later `AddTheme` registration, partial palettes,
-`locked` alias, and callbacks remain supported. Unknown fields and
-empty/malformed themes are deliberately rejected. The four reviewed
-Catppuccin palettes are additionally registered as free named presets, with
-their license retained. Default remains the initial theme; original paid-theme
-entitlement behavior is retained. The presets and validation pass isolated tests.
+Partial palettes, the `locked` color-field alias, and callbacks remain
+supported. Unknown fields and empty/malformed themes are deliberately
+rejected. The four reviewed Catppuccin palettes are registered as named
+presets with their license retained. Default remains the initial theme.
+All 18 bundled names are now selectable; the unused `AddTheme` registration
+path, separate named-theme allowlist, and price presentation have been
+removed. Selecting a theme still goes through the staged input validation.
 
 Official enum references:
 
 - <https://create.roblox.com/docs/reference/engine/enums/ScaleType>
 - <https://create.roblox.com/docs/reference/engine/enums/ResamplerMode>
+
+### First-run activation and remote version restriction
+
+The baseline's three toolbar buttons initially opened an EULA/activation
+window. A local `MoonAnimator2Activated_2` setting selected the path that
+refreshed files, connected the actual tool callbacks, and restored the saved
+theme. The inspected code did not perform an activation-key, purchase, or
+online ownership check; the visible account ID was a label only.
+
+A separate Marketplace product-description request could detect a newer
+version and hide activation controls, title labels, and shared UI elements.
+Request failures were swallowed. A newer-version result blocked first-time
+activation by hiding its button and changed the UI for previously activated
+users; it was not a universal removal of every existing tool callback.
+
+**Change:** Initialize files, tool callbacks, and the saved theme directly.
+Remove the activation setting, acceptance handlers, account-status display,
+and remote version request/UI restriction. Preserve the original terms in an
+optional **Credits & terms** window. The old serialized window/file name may
+remain for compatibility with the packaged hierarchy; it has no activation
+behavior. Roblox's `Plugin:Activate`/`Deactivate` mouse-interaction methods
+are unrelated to licensing and remain intact.
+
+The event editor's explicit session preview approval also remains intact.
+Removing plugin activation does not authorize imported event content.
+
+### Beginner Windows installation
+
+The deterministic Windows ZIP contains only the reviewed model, a readable
+`Install.cmd`, and `START_HERE.txt`. Its helper validates the embedded model
+hash, requires Studio to be closed, stages the destination file, and backs up
+an existing managed copy before replacement. Backups live outside the active
+plugins directory. It does not fetch code, request administrator access,
+change PowerShell execution policy, edit the registry, or modify other
+plugins. A manual installation route is documented.
+
+Portable tests check package content and reproducibility. A separate native
+Windows CI job exercises the actual helper with temporary local-app-data
+directories, including failed validation and replacement behavior. This
+checks the installer; it does not establish full Roblox Studio compatibility.
 
 ### Cross-rig joints
 
@@ -227,12 +270,11 @@ bytes. This is a narrow editor for the pinned package, not a general model
 converter or a security validator for arbitrary third-party patches.
 
 The included evidence records the actual focused checks and source compilation
-results. Event, editor, playback, theme, and welding harnesses use explicit Roblox mocks. They
+results. Event, editor, playback, theme, startup, and welding harnesses use explicit Roblox mocks. They
 verify the relevant module behavior without launching the complete plugin.
 Compilation of extracted sources checks syntax only. None of these checks
 establish Studio UI rendering, current Roblox API compatibility, save/export
-integration, fetched-asset safety, or successful startup under the retained
-version check.
+integration, fetched-asset safety, or complete runtime startup in Studio.
 
 The repository's verifier rebuilds the candidate, requires its bytes and
 manifest to match the checked-in files, compares all source snapshots, and
@@ -244,6 +286,6 @@ is unavailable, using `lstat` attributes instead.
 The remaining Studio smoke test covers startup and preview cameras; a short
 animation saved, reopened, and exported; named markers; approved effects and
 inert legacy source; Stop cleanup; empty-container welding; and valid/invalid
-theme imports. The baseline version/UI lock and fetched-asset behavior remain
-unverified. Preserve a known working plugin and animation backup until those
+theme imports. Fetched-asset behavior and complete Studio runtime behavior
+remain unverified. Preserve a known working plugin and animation backup until those
 flows pass.

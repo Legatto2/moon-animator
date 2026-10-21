@@ -1,23 +1,6 @@
 local _g = _G.MoonGlobal
 ------------------------------------------------------------
-local FILE_MENU = {
-	{"theme_list", "Theme"},
-	{"h_contact", "@xsixx"},
-	theme_list = {
-
-	},
-}
-local cur_list = FILE_MENU.theme_list
-local price = true
-for _, theme in pairs(_g.Themer.ThemeList) do
-	if theme == "~" then
-		table.insert(cur_list, "~")
-		price = false
-	else
-		table.insert(cur_list, {"Activate_Theme_"..theme, theme, extra = {NoClickOff = true, Price = price}})
-	end
-end
-
+-- The original terms remain an optional reference in the credits window.
 local EULA = [[The SOFTWARE PRODUCT (Moon Animator 2) is licensed.
 1. LICENSES
 *1Moon Animator 2 is licensed as follows:
@@ -38,31 +21,18 @@ local EULA = [[The SOFTWARE PRODUCT (Moon Animator 2) is licensed.
 *1due to use of Moon Animator 2.
 ]]
 
-local WindowData = _g.WindowData:new("End User License Agreement",  script.Contents)
-WindowData.MenuBar = _g.MenuBar.MenuBarFactory("ActivateMenu", FILE_MENU)
+local WindowData = _g.WindowData:new("Credits & terms", script.Contents)
 local Win = _g.Window:new(script.Name, WindowData)
 
-for _, theme in pairs(_g.Themer.ThemeList) do
-	if theme ~= "~" then
-		if theme == "Default" then
-			_g.Input:BindAction(Win, "Activate_Theme_"..theme, function()
-				_g.Themer:SetTheme(theme)
-				_g.plugin:SetSetting(_g.theme_key, nil)
-			end, {}, false)
-		else
-			_g.Input:BindAction(Win, "Activate_Theme_"..theme, function()
-				_g.Themer:SetTheme(theme)
-				_g.plugin:SetSetting(_g.theme_key, theme)
-			end, {}, false)
-		end
-	end
-end
+-- Keep the serialized hierarchy compatible while removing acceptance controls.
+UI.Buttons.Activate.Visible = false
+local CloseButton = Button:new(Win.g_e.Decline)
+CloseButton.UI.Label.Text = "Close"
 
-Button:new(Win.g_e.Activate)
-Button:new(Win.g_e.Decline)
-
-local LicId = UI.LicId
-local LicStatus = UI.LicStatus
+UI.LicId.Text = "Moon Animator 2 — @xsixx"
+UI.LicStatus.Text = ""
+UI.LicStatus.Visible = false
+Win:AddPaintedItem(UI.LicId, {TextColor3 = "main"})
 
 local line_ui = UI.Section.Lines.Line
 local frame = line_ui.Parent; line_ui.Parent = nil
@@ -85,25 +55,15 @@ for line in EULA:gmatch("[%w%p ]+\n+") do line = line:gsub("\n", "")
 	new_line.Parent = frame
 end
 
-local id = game:GetService("StudioService"):GetUserId()
-LicId.Text = "License for account <b>"..tostring(id).."</b>"
-LicStatus.Text = '<i>NOT ACTIVATED</i>'
-
-Win:AddPaintedItem(LicId, {TextColor3 = "main"})
-Win:AddPaintedItem(LicStatus, {TextColor3 = "highlight"})
-
 for _, ui in pairs(UI.Parent.Resizers:GetChildren()) do
 	ui.Visible = false
 end
-------------------------------------------------------------
-do
-	Win.OnOpen = function(args)
-		return true
-	end
 
-	Decline.OnClick = function()
-		Win:Close()
-	end
+Win.OnOpen = function()
+	return true
+end
+CloseButton.OnClick = function()
+	Win:Close()
 end
 
 return Win

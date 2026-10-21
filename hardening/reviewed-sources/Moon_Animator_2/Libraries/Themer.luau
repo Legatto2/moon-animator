@@ -55,14 +55,6 @@ local Themer = {}
 	Themer.QUICK_TWEEN = 0.06
 
 	Themer.theme_changed = {}
-	Themer.theme_buttons = {}
-
-	local themes = {
-		Default = true, Dark = true, Lunar = true, Subspace = true,
-		["Catppuccin Latte"] = true, ["Catppuccin Frappe"] = true,
-		["Catppuccin Macchiato"] = true, ["Catppuccin Mocha"] = true,
-	}
-	local saved
 ------------------------------------------------------------
 do
 	function Themer:QuickTween(obj, tweenTime, propMap, slow_start)
@@ -213,8 +205,8 @@ do
 		if newTheme == nil then
 			newTheme = _g.Themer._BuiltInThemes.Default
 		elseif type(newTheme) == "string" then
-			if themes[newTheme] == nil then saved = newTheme return false end
 			newTheme = _g.Themer._BuiltInThemes[newTheme]
+			if newTheme == nil then return false, "Unknown built-in theme." end
 		end
 		if type(newTheme) ~= "table" then return false, "Theme must be a table." end
 		
@@ -257,29 +249,6 @@ do
 		return true
 	end
 	
-	local count = 0
-	function Themer:AddTheme(theme)
-		if themes[theme] or self.theme_buttons[theme] == nil then return end
-		themes[theme] = true
-		count = count + 1
-		for _, mi in pairs(self.theme_buttons[theme]) do
-			mi.price_frame.Icon.TextTransparency = 1
-			mi.price_frame.Label.TextTransparency = 1
-		end
-		if saved == theme then
-			self:SetTheme(theme)
-		end
-		if count == 10 then
-			for _, tbl in pairs(self.theme_buttons) do
-				for _, mi in pairs(tbl) do
-					mi.Menu.sized = false
-					mi.price_frame.Icon.Visible = false
-					mi.price_frame.Label.Visible = false
-					mi.price_frame.Frame3.Size = UDim2.new(0, 14, 1, 0)
-				end
-			end
-		end
-	end
 end
 
 return Themer

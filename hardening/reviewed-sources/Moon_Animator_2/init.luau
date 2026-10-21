@@ -944,121 +944,31 @@ do
 	_g.Themer:SetTheme()
 end
 ------------------------------------------------------------
+-- BEGIN LOCAL STARTUP
+-- Toolbar actions and saved appearance are available on the first launch.
 do
-	local win_Activate = _g.Windows.Activate
-	
-	local ver_ui = _g.new_ui.Version
-	local ver_check = pcall(function()
-		local verCheck = game:GetService("MarketplaceService"):GetProductInfo(4725618216).Description
-		if verCheck then
-			local _, checkVer = string.find(verCheck, "!V")
-			if checkVer then
-				local theVer = tonumber(string.sub(verCheck, checkVer + 1))
-				if theVer > _g.ver then
-					ver_ui.Label.Text = "v"..tostring(_g.ver).." [OUT OF DATE, NEW v"..tostring(theVer).."]"
-					ver_ui.Visible = true
-				end
-			end
-		end
-	end)
-	--[[if not ver_check then
-		ver_ui.Label.Text = "[ OUT OF DATE ]"
-		ver_ui.Visible = true
-	end]]
-	if ver_ui.Visible then
-		win_Activate.g_e.Activate.UI.Visible = false
-		win_Activate.g_e.Decline.UI.Visible = false
-		for _, ui in pairs(_g.new_ui:GetChildren()) do
-			if ui.ClassName == "ImageButton" then
-				for _, v in pairs(ui:GetDescendants()) do
-					if not pcall(function() local store = v.Text end) then
-						pcall(function() v.Visible = false end)
-					end
-				end
-			end
-		end
-		for _, win in pairs(_g.Windows) do
-			if win.moon_img then
-				win.moon_img.Visible = false
-			end
-			win.UI.TitleBar.Title.Visible = false
-		end
-	end
-	ver_ui:Clone().Parent = _g.Windows.MoonAnimator.UI.TitleBar
-	ver_ui:Clone().Parent = _g.Windows.Activate.UI.TitleBar
-	
-	local create = {
-		pluginToolbar:CreateButton("",
-			"Moon\nAnimator\n------------",
-			"http://www.roblox.com/asset/?id=11624384141"),
-		pluginToolbar:CreateButton("",
-			"Character\nInserter\n------------",
-			"http://www.roblox.com/asset/?id=11624574138"),
-		pluginToolbar:CreateButton("",
-			"Easy\nWeld\n------------",
-			"http://www.roblox.com/asset/?id=11624574435"),
-	}
-	
-	local buttons = {
-		but_MoonAnimator = create[1],
-		but_CharacterInserter = create[2],
-		but_Welder = create[3],
-	}
-	
-	local events = {}
-	
-	local target_open
-	
-	local lic_ver = 2
 	_g.theme_key = "MoonAnimator2_Colors"
-	
-	for name, but in pairs(buttons) do
-		table.insert(events, but.Click:Connect(function()
-			but:SetActive(false)
-			target_open = name:sub(5)
-			if win_Activate.Visible == false then
-				win_Activate:Open()
-			end
-		end))
-	end
-	
-	function activate()
-		_g.Files.RefreshFiles()
-		for _, e in pairs(events) do
-			e:Disconnect()
-		end
-		if win_Activate.Visible then
-			win_Activate:Close()
-		end
-		win_Activate.g_e.Activate:SetActive(false)
-		win_Activate.g_e.Decline:SetActive(false)
-		plugin:SetSetting("MoonAnimator2Activated_"..tostring(lic_ver), true)
-		
-		win_Activate.Contents.LicStatus.Text = "<b>ACTIVATED</b>"
-		win_Activate.Contents.LicStatus.Position = 	win_Activate.Contents.LicStatus.Position + UDim2.new(0, 1, 0, 0)
-		win_Activate:SetItemPaint(win_Activate.Contents.LicStatus, {TextColor3 = "main"})
+	_g.Files.RefreshFiles()
 
-		for name, but in pairs(buttons) do
-			local window_name = name:sub(5)
-			but.Click:Connect(function()
-				but:SetActive(false)
-				_g.Windows[window_name]:Toggle()
-			end)
-		end
-		if target_open then
-			_g.Windows[target_open]:Toggle()
-		end
-		local SavedTheme = _g.plugin:GetSetting(_g.theme_key)
-		if SavedTheme ~= nil then
-			_g.Themer:SetTheme(SavedTheme)
-		end
+	local tools = {
+		{"MoonAnimator", "Moon\nAnimator\n------------", "http://www.roblox.com/asset/?id=11624384141"},
+		{"CharacterInserter", "Character\nInserter\n------------", "http://www.roblox.com/asset/?id=11624574138"},
+		{"Welder", "Easy\nWeld\n------------", "http://www.roblox.com/asset/?id=11624574435"},
+	}
+	for _, tool in ipairs(tools) do
+		local windowName = tool[1]
+		local button = pluginToolbar:CreateButton("", tool[2], tool[3])
+		button.Click:Connect(function()
+			button:SetActive(false)
+			_g.Windows[windowName]:Toggle()
+		end)
 	end
-	
-	if plugin:GetSetting("MoonAnimator2Activated_"..tostring(lic_ver)) then
-		activate()
-	else
-		table.insert(events, win_Activate.g_e.Activate.UI.MouseButton1Click:Connect(activate))
+
+	local savedTheme = _g.plugin:GetSetting(_g.theme_key)
+	if savedTheme ~= nil then
+		-- Invalid or obsolete saved values leave the validated Default theme intact.
+		_g.Themer:SetTheme(savedTheme)
 	end
-	
 	_g.ready = true
 end
+-- END LOCAL STARTUP
