@@ -7,13 +7,13 @@
 
 <p>
   <a href="#getting-started"><img src="https://img.shields.io/badge/platform-Roblox_Studio-89b4fa?style=flat-square" alt="Platform: Roblox Studio"></a>
-  <a href="https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml?query=branch%3Ahardening%2Freviewed-v34000"><img src="https://img.shields.io/github/actions/workflow/status/Legatto2/moon-animator/verify-hardening.yml?branch=hardening%2Freviewed-v34000&amp;style=flat-square&amp;label=candidate_verification" alt="Live candidate verification workflow status"></a>
+  <a href="https://github.com/Legatto2/moon-animator/actions/workflows/verify-hardening.yml?query=branch%3Amain"><img src="https://img.shields.io/github/actions/workflow/status/Legatto2/moon-animator/verify-hardening.yml?branch=main&amp;style=flat-square&amp;label=candidate_verification" alt="Live candidate verification workflow status"></a>
   <a href="hardening/evidence/verification.json"><img src="https://img.shields.io/badge/local_tests-167_passed-a6e3a1?style=flat-square" alt="Recorded local tests: 167 passed"></a>
   <a href="hardening/REVIEW.md"><img src="https://img.shields.io/badge/status-review_candidate-f9e2af?style=flat-square" alt="Status: review candidate"></a>
 </p>
 
 <p>
-  <a href="hardening/candidate/Moon_Animator_2_review_candidate.rbxm?raw=true"><strong>Download review candidate</strong></a>
+  <a href="https://raw.githubusercontent.com/Legatto2/moon-animator/07127379c6dd44219c7e4d4bdde5e1852cc34d09/hardening/candidate/Moon_Animator_2_review_candidate.rbxm"><strong>Download review candidate</strong></a>
   &nbsp;&middot;&nbsp;
   <a href="hardening/README.md">Build guide</a>
   &nbsp;&middot;&nbsp;
@@ -42,7 +42,7 @@ The inherited rig, part, and camera animation tools, easing, timeline controls, 
 
 ## Getting started
 
-1. **Get the candidate.** Download [Moon_Animator_2_review_candidate.rbxm](hardening/candidate/Moon_Animator_2_review_candidate.rbxm?raw=true). Its [build manifest](hardening/candidate/Moon_Animator_2_review_candidate.rbxm.manifest.json) records the input, output, and exact changes. The original model at the repository root is the build input.
+1. **Get the candidate.** Download [Moon_Animator_2_review_candidate.rbxm](https://raw.githubusercontent.com/Legatto2/moon-animator/07127379c6dd44219c7e4d4bdde5e1852cc34d09/hardening/candidate/Moon_Animator_2_review_candidate.rbxm). Its [build manifest](hardening/candidate/Moon_Animator_2_review_candidate.rbxm.manifest.json) records the input, output, and exact changes. The original model at the repository root is the build input.
 2. **Open a disposable local place.** Follow the [local-plugin setup and acceptance checklist](hardening/README.md#studio-acceptance-check). Disable other Moon Animator copies while testing to avoid toolbar and global-state collisions.
 3. **Check the workflows you use.** Start with a short rig animation and a save/import/export round trip. Then try the theme presets and the event-preview example below. Record any startup, layout, or engine behavior that differs from the checklist.
 
