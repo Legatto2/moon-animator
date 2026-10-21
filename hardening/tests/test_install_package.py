@@ -74,6 +74,11 @@ class InstallPackageTests(unittest.TestCase):
         self.assertLess(command.index("Assert-StudioClosed;"), command.index("CreateDirectory($plugins)"))
         self.assertLess(command.index("if ((Get-Hash $stage)"), command.index("[IO.File]::Replace("))
         self.assertLess(command.index("if ((Get-Hash $backup)"), command.index("[IO.File]::Replace("))
+        # Windows PowerShell 5.1 otherwise binds $null to an empty string for
+        # this .NET string parameter, which File.Replace rejects as a path.
+        self.assertIn("[IO.File]::Replace($stage, $destination, "
+                      "[System.Management.Automation.Language.NullString]::Value)", command)
+        self.assertNotIn("[IO.File]::Replace($stage, $destination, $null)", command)
         self.assertIn("[IO.File]::Move($stage, $destination)", command)
         # Every model pathname is fixed or taken from env data, not interpolated
         # into command text through a cmd expansion of a user-controlled path.

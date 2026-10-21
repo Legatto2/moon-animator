@@ -61,7 +61,13 @@ For a manual update, close Studio, keep a backup outside the plugins folder, and
 
 To remove it, close Studio and delete only `Moon_Animator_2_review_candidate.rbxm` from your local plugins folder. Your animation projects are separate and are not removed by deleting the plugin file.
 
-To restore an installer backup, close Studio, copy the desired `.rbxm.bak` file from `%LOCALAPPDATA%\MoonAnimator2\Backups` into the plugins folder, and rename that copy to `Moon_Animator_2_review_candidate.rbxm`. Keep backup files outside the plugins folder until you choose one to restore.
+To restore an installer backup:
+
+1. Close Studio and move the current `Moon_Animator_2_review_candidate.rbxm` out of the plugins folder to a separate backup folder.
+2. Copy your chosen `.rbxm.bak` file from `%LOCALAPPDATA%\MoonAnimator2\Backups` into the plugins folder.
+3. Rename that copy to `Moon_Animator_2_review_candidate.rbxm`, removing the final `.bak`, then reopen Studio. Enable **View → Show → File name extensions** in Windows File Explorer if you cannot see the full filename.
+
+Keep the original backups outside the plugins folder.
 
 ## If something goes wrong
 

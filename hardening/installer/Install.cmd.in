@@ -56,7 +56,7 @@ rem Each quoted fragment below is part of one readable PowerShell command.
   "    if ((Get-Hash $backup) -ne $previousHash) { throw 'The existing plugin could not be backed up correctly. Installation stopped.' };" ^
   "    Write-Host ('Backup saved: ' + $backup);" ^
   "    Assert-PlainPath $destination; Assert-PlainPath $stage; Assert-StudioClosed;" ^
-  "    [IO.File]::Replace($stage, $destination, $null);" ^
+  "    [IO.File]::Replace($stage, $destination, [System.Management.Automation.Language.NullString]::Value);" ^
   "  } else {" ^
   "    Assert-PlainPath $destination; Assert-PlainPath $stage; Assert-StudioClosed;" ^
   "    [IO.File]::Move($stage, $destination);" ^

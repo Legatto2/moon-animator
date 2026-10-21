@@ -138,8 +138,8 @@
   },
   "windows_install_package": {
     "file": "candidate/Moon_Animator_2_Windows_Install.zip",
-    "bytes": 916736,
-    "sha256": "e9a93e3717be9eb9c922b2917b33d06b67f5a3426a432f8a3b7a3086b7638bc1",
+    "bytes": 916788,
+    "sha256": "bbbb695dfaf58bf693ed61b5e9057605a96d2670fe84ad6a6ebbed8f2fedca4f",
     "member_count": 3,
     "includes_exact_candidate": true
   },
@@ -160,5 +160,6 @@
     "safe_event_preview_approval_preserved": true,
     "engine_mouse_activation_preserved": true
   },
-  "installer_builder_sha256": "0174b8c91fbb696de9be5627ab086fd31b9487d23828b0b9ba79f586c1afab36"
+  "installer_builder_sha256": "0174b8c91fbb696de9be5627ab086fd31b9487d23828b0b9ba79f586c1afab36",
+  "installer_template_sha256": "0f7ffe4df26436810113100eb40e7b0a3842926618faa741fe42200bda07d139"
 }
