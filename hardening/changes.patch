@@ -609,6 +609,62 @@
  		super.RemoveTrackItem(self, Marker)
  		return Marker
  	end
+--- a/Moon_Animator_2/Classes/Menu/MenuItem.luau
++++ b/Moon_Animator_2/Classes/Menu/MenuItem.luau
+@@ -36,13 +36,6 @@
+ 				check_frame.Parent = ctor.left_ui
+ 				ctor:AddPaintedItem(check_frame.Frame, {BackgroundColor3 = "bg"})
+ 				ctor:AddPaintedItem(check_frame.Frame.UIStroke, {Color = "main"})
+-			end
+-			if extra and extra.Price then
+-				MenuItem._SetPrice(ctor, "4.99")
+-				if _g.Themer.theme_buttons[ItemLabel] == nil then
+-					_g.Themer.theme_buttons[ItemLabel] = {}
+-				end
+-				table.insert(_g.Themer.theme_buttons[ItemLabel], ctor)
+ 			end
+ 			if _g.Input and _g.Input.Actions and _g.Input.Actions[name] then
+ 				MenuItem._SetControl(ctor, _g.Input.Actions[name].keys)
+@@ -84,28 +77,6 @@
+ 	self.middle_ui.Hover.Visible = false
+ end
+ 
+-function MenuItem:_SetPrice(price)
+-	local price_frame = _g.new_ui.Menu.PriceFrame:Clone(); self.price_frame = price_frame
+-	price_frame.Label.Text = tostring(price)
+-	price_frame.Parent = self.right_ui
+-	
+-	self:AddPaintedItem(price_frame.Icon, {TextColor3 = "main"})
+-	self:AddPaintedItem(price_frame.Label, {TextColor3 = "main"})
+-	
+-	self:RemovePaintedItem(self.item_frame.Label)
+-	self:RemovePaintedItem(self.middle_ui.Hover)
+-	self:RemovePaintedItem(self.middle_ui.Hover.UIStroke)
+-	
+-	local theme = _g.Themer._BuiltInThemes[self.item_frame.Label.Text]
+-	self.item_frame.Label.TextColor3 = Color3.fromRGB(table.unpack(theme.main))
+-	price_frame.Frame1.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.main))
+-	price_frame.Frame2.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.second))
+-	price_frame.Frame3.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.third))
+-	
+-	self.middle_ui.Hover.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.highlight))
+-	self.middle_ui.Hover.UIStroke.Color = Color3.fromRGB(table.unpack(theme.highlight))
+-end
+-
+ function MenuItem:_SetControl(keys)
+ 	if keys == nil then keys = {} end
+ 	
+@@ -130,9 +101,7 @@
+ 	
+ 	local color = value and "third" or "main"
+ 	
+-	if not self.price_frame then
+-		self:SetItemPaint(self.item_frame.Label, {TextColor3 = color})
+-	end
++	self:SetItemPaint(self.item_frame.Label, {TextColor3 = color})
+ 	if self.more_frame then
+ 		self:SetItemPaint(self.more_frame.Arrow, {TextColor3 = value and "third" or "second"})
+ 	end
 --- a/Moon_Animator_2/Libraries/Themer.luau
 +++ b/Moon_Animator_2/Libraries/Themer.luau
 @@ -12,6 +12,14 @@
@@ -643,20 +699,18 @@
  		else
  			Themer._Theme[paintName] = Color3.fromRGB(paint[1], paint[2], paint[3])
  		end
-@@ -48,7 +57,11 @@
- 	Themer.theme_changed = {}
- 	Themer.theme_buttons = {}
+@@ -46,10 +55,6 @@
+ 	Themer.QUICK_TWEEN = 0.06
  
+ 	Themer.theme_changed = {}
+-	Themer.theme_buttons = {}
+-
 -	local themes = {Default = true, Dark = true, Lunar = true, Subspace = true}
-+	local themes = {
-+		Default = true, Dark = true, Lunar = true, Subspace = true,
-+		["Catppuccin Latte"] = true, ["Catppuccin Frappe"] = true,
-+		["Catppuccin Macchiato"] = true, ["Catppuccin Mocha"] = true,
-+	}
- 	local saved
+-	local saved
  ------------------------------------------------------------
  do
-@@ -172,6 +185,24 @@
+ 	function Themer:QuickTween(obj, tweenTime, propMap, slow_start)
+@@ -172,6 +177,24 @@
  end
  ------------------------------------------------------------
  do
@@ -681,10 +735,15 @@
  	function Themer:_paintAll(noTween)
  		for itemId, paintData in pairs(self._PaintMap) do
  			self:_paint(self._PaintedItemMap[itemId],  paintData, noTween and 0 or 0.4)
-@@ -185,20 +216,45 @@
- 			if themes[newTheme] == nil then saved = newTheme return false end
+@@ -182,48 +205,50 @@
+ 		if newTheme == nil then
+ 			newTheme = _g.Themer._BuiltInThemes.Default
+ 		elseif type(newTheme) == "string" then
+-			if themes[newTheme] == nil then saved = newTheme return false end
  			newTheme = _g.Themer._BuiltInThemes[newTheme]
- 		end
+-		end
++			if newTheme == nil then return false, "Unknown built-in theme." end
++		end
 +		if type(newTheme) ~= "table" then return false, "Theme must be a table." end
  		
  		local no_tween = newTheme == _g.Themer._BuiltInThemes.Default or newTheme == _g.Themer._BuiltInThemes.Dark or newTheme == _g.Themer._BuiltInThemes.Lunar or newTheme == _g.Themer._BuiltInThemes.Subspace
@@ -730,7 +789,131 @@
 +		return true
  	end
  	
- 	local count = 0
+-	local count = 0
+-	function Themer:AddTheme(theme)
+-		if themes[theme] or self.theme_buttons[theme] == nil then return end
+-		themes[theme] = true
+-		count = count + 1
+-		for _, mi in pairs(self.theme_buttons[theme]) do
+-			mi.price_frame.Icon.TextTransparency = 1
+-			mi.price_frame.Label.TextTransparency = 1
+-		end
+-		if saved == theme then
+-			self:SetTheme(theme)
+-		end
+-		if count == 10 then
+-			for _, tbl in pairs(self.theme_buttons) do
+-				for _, mi in pairs(tbl) do
+-					mi.Menu.sized = false
+-					mi.price_frame.Icon.Visible = false
+-					mi.price_frame.Label.Visible = false
+-					mi.price_frame.Frame3.Size = UDim2.new(0, 14, 1, 0)
+-				end
+-			end
+-		end
+-	end
+ end
+ 
+ return Themer
+--- a/Moon_Animator_2/Windows/Activate.luau
++++ b/Moon_Animator_2/Windows/Activate.luau
+@@ -1,23 +1,6 @@
+ local _g = _G.MoonGlobal
+ ------------------------------------------------------------
+-local FILE_MENU = {
+-	{"theme_list", "Theme"},
+-	{"h_contact", "@xsixx"},
+-	theme_list = {
+-
+-	},
+-}
+-local cur_list = FILE_MENU.theme_list
+-local price = true
+-for _, theme in pairs(_g.Themer.ThemeList) do
+-	if theme == "~" then
+-		table.insert(cur_list, "~")
+-		price = false
+-	else
+-		table.insert(cur_list, {"Activate_Theme_"..theme, theme, extra = {NoClickOff = true, Price = price}})
+-	end
+-end
+-
++-- The original terms remain an optional reference in the credits window.
+ local EULA = [[The SOFTWARE PRODUCT (Moon Animator 2) is licensed.
+ 1. LICENSES
+ *1Moon Animator 2 is licensed as follows:
+@@ -38,31 +21,18 @@
+ *1due to use of Moon Animator 2.
+ ]]
+ 
+-local WindowData = _g.WindowData:new("End User License Agreement",  script.Contents)
+-WindowData.MenuBar = _g.MenuBar.MenuBarFactory("ActivateMenu", FILE_MENU)
++local WindowData = _g.WindowData:new("Credits & terms", script.Contents)
+ local Win = _g.Window:new(script.Name, WindowData)
+ 
+-for _, theme in pairs(_g.Themer.ThemeList) do
+-	if theme ~= "~" then
+-		if theme == "Default" then
+-			_g.Input:BindAction(Win, "Activate_Theme_"..theme, function()
+-				_g.Themer:SetTheme(theme)
+-				_g.plugin:SetSetting(_g.theme_key, nil)
+-			end, {}, false)
+-		else
+-			_g.Input:BindAction(Win, "Activate_Theme_"..theme, function()
+-				_g.Themer:SetTheme(theme)
+-				_g.plugin:SetSetting(_g.theme_key, theme)
+-			end, {}, false)
+-		end
+-	end
+-end
++-- Keep the serialized hierarchy compatible while removing acceptance controls.
++UI.Buttons.Activate.Visible = false
++local CloseButton = Button:new(Win.g_e.Decline)
++CloseButton.UI.Label.Text = "Close"
+ 
+-Button:new(Win.g_e.Activate)
+-Button:new(Win.g_e.Decline)
+-
+-local LicId = UI.LicId
+-local LicStatus = UI.LicStatus
++UI.LicId.Text = "Moon Animator 2 — @xsixx"
++UI.LicStatus.Text = ""
++UI.LicStatus.Visible = false
++Win:AddPaintedItem(UI.LicId, {TextColor3 = "main"})
+ 
+ local line_ui = UI.Section.Lines.Line
+ local frame = line_ui.Parent; line_ui.Parent = nil
+@@ -85,25 +55,15 @@
+ 	new_line.Parent = frame
+ end
+ 
+-local id = game:GetService("StudioService"):GetUserId()
+-LicId.Text = "License for account <b>"..tostring(id).."</b>"
+-LicStatus.Text = '<i>NOT ACTIVATED</i>'
+-
+-Win:AddPaintedItem(LicId, {TextColor3 = "main"})
+-Win:AddPaintedItem(LicStatus, {TextColor3 = "highlight"})
+-
+ for _, ui in pairs(UI.Parent.Resizers:GetChildren()) do
+ 	ui.Visible = false
+ end
+-------------------------------------------------------------
+-do
+-	Win.OnOpen = function(args)
+-		return true
+-	end
+ 
+-	Decline.OnClick = function()
+-		Win:Close()
+-	end
++Win.OnOpen = function()
++	return true
++end
++CloseButton.OnClick = function()
++	Win:Close()
+ end
+ 
+ return Win
 --- a/Moon_Animator_2/Windows/EditMarkers.luau
 +++ b/Moon_Animator_2/Windows/EditMarkers.luau
 @@ -4,28 +4,193 @@
@@ -1084,6 +1267,41 @@
  
  			Color:Set(_g.Themer._Theme[TargetColor.Value])
  
+--- a/Moon_Animator_2/Windows/MoonAnimator.luau
++++ b/Moon_Animator_2/Windows/MoonAnimator.luau
+@@ -120,7 +120,7 @@
+ 			"~",
+ 			{"other", "Other"},
+ 			other = {
+-				{"OpenActivate", "EULA..."},
++				{"OpenActivate", "Credits & terms..."},
+ 				{"OpenEditTheme", "Edit Theme..."},
+ 				{"version", "!V"..tostring(_g.ver)},
+ 			},
+@@ -131,13 +131,11 @@
+ 	}
+ 
+ 	local cur_list = FILE_MENU.h_theme
+-	local price = true
+ 	for _, theme in pairs(_g.Themer.ThemeList) do
+ 		if theme == "~" then
+ 			table.insert(cur_list, "~")
+-			price = false
+ 		else
+-			table.insert(cur_list, {"Theme_"..theme, theme, extra = {NoClickOff = true, Price = price}})
++			table.insert(cur_list, {"Theme_"..theme, theme, extra = {NoClickOff = true}})
+ 		end
+ 	end
+ 
+@@ -808,7 +806,7 @@
+ 	
+ 	local support_data = {
+ 		Voldex = {"Voldex", 13912834315, "Supported by Voldex!\n\n@VoldexGames"},
+-		Themes = {"Moon Animator Themes", 13913165611, "Buy themes to support Moon Animator!\n\n@xsixx"},
++		Themes = {"Moon Animator Themes", 13913165611, "All bundled themes are available in this fork.\n\nOriginal Moon Animator author: @xsixx"},
+ 	}
+ 	
+ 	Win:AddPaintedItem(RigSelLabel, {TextColor3 = "highlight"})
 --- a/Moon_Animator_2/Windows/Welder.luau
 +++ b/Moon_Animator_2/Windows/Welder.luau
 @@ -113,11 +113,11 @@
@@ -1167,3 +1385,151 @@
  	end
  end
  ------------------------------------------------------------
+--- a/Moon_Animator_2/init.luau
++++ b/Moon_Animator_2/init.luau
+@@ -944,121 +944,31 @@
+ 	_g.Themer:SetTheme()
+ end
+ ------------------------------------------------------------
++-- BEGIN LOCAL STARTUP
++-- Toolbar actions and saved appearance are available on the first launch.
+ do
+-	local win_Activate = _g.Windows.Activate
+-	
+-	local ver_ui = _g.new_ui.Version
+-	local ver_check = pcall(function()
+-		local verCheck = game:GetService("MarketplaceService"):GetProductInfo(4725618216).Description
+-		if verCheck then
+-			local _, checkVer = string.find(verCheck, "!V")
+-			if checkVer then
+-				local theVer = tonumber(string.sub(verCheck, checkVer + 1))
+-				if theVer > _g.ver then
+-					ver_ui.Label.Text = "v"..tostring(_g.ver).." [OUT OF DATE, NEW v"..tostring(theVer).."]"
+-					ver_ui.Visible = true
+-				end
+-			end
+-		end
+-	end)
+-	--[[if not ver_check then
+-		ver_ui.Label.Text = "[ OUT OF DATE ]"
+-		ver_ui.Visible = true
+-	end]]
+-	if ver_ui.Visible then
+-		win_Activate.g_e.Activate.UI.Visible = false
+-		win_Activate.g_e.Decline.UI.Visible = false
+-		for _, ui in pairs(_g.new_ui:GetChildren()) do
+-			if ui.ClassName == "ImageButton" then
+-				for _, v in pairs(ui:GetDescendants()) do
+-					if not pcall(function() local store = v.Text end) then
+-						pcall(function() v.Visible = false end)
+-					end
+-				end
+-			end
+-		end
+-		for _, win in pairs(_g.Windows) do
+-			if win.moon_img then
+-				win.moon_img.Visible = false
+-			end
+-			win.UI.TitleBar.Title.Visible = false
+-		end
+-	end
+-	ver_ui:Clone().Parent = _g.Windows.MoonAnimator.UI.TitleBar
+-	ver_ui:Clone().Parent = _g.Windows.Activate.UI.TitleBar
+-	
+-	local create = {
+-		pluginToolbar:CreateButton("",
+-			"Moon\nAnimator\n------------",
+-			"http://www.roblox.com/asset/?id=11624384141"),
+-		pluginToolbar:CreateButton("",
+-			"Character\nInserter\n------------",
+-			"http://www.roblox.com/asset/?id=11624574138"),
+-		pluginToolbar:CreateButton("",
+-			"Easy\nWeld\n------------",
+-			"http://www.roblox.com/asset/?id=11624574435"),
++	_g.theme_key = "MoonAnimator2_Colors"
++	_g.Files.RefreshFiles()
++
++	local tools = {
++		{"MoonAnimator", "Moon\nAnimator\n------------", "http://www.roblox.com/asset/?id=11624384141"},
++		{"CharacterInserter", "Character\nInserter\n------------", "http://www.roblox.com/asset/?id=11624574138"},
++		{"Welder", "Easy\nWeld\n------------", "http://www.roblox.com/asset/?id=11624574435"},
+ 	}
+-	
+-	local buttons = {
+-		but_MoonAnimator = create[1],
+-		but_CharacterInserter = create[2],
+-		but_Welder = create[3],
+-	}
+-	
+-	local events = {}
+-	
+-	local target_open
+-	
+-	local lic_ver = 2
+-	_g.theme_key = "MoonAnimator2_Colors"
+-	
+-	for name, but in pairs(buttons) do
+-		table.insert(events, but.Click:Connect(function()
+-			but:SetActive(false)
+-			target_open = name:sub(5)
+-			if win_Activate.Visible == false then
+-				win_Activate:Open()
+-			end
+-		end))
+-	end
+-	
+-	function activate()
+-		_g.Files.RefreshFiles()
+-		for _, e in pairs(events) do
+-			e:Disconnect()
+-		end
+-		if win_Activate.Visible then
+-			win_Activate:Close()
+-		end
+-		win_Activate.g_e.Activate:SetActive(false)
+-		win_Activate.g_e.Decline:SetActive(false)
+-		plugin:SetSetting("MoonAnimator2Activated_"..tostring(lic_ver), true)
+-		
+-		win_Activate.Contents.LicStatus.Text = "<b>ACTIVATED</b>"
+-		win_Activate.Contents.LicStatus.Position = 	win_Activate.Contents.LicStatus.Position + UDim2.new(0, 1, 0, 0)
+-		win_Activate:SetItemPaint(win_Activate.Contents.LicStatus, {TextColor3 = "main"})
+-
+-		for name, but in pairs(buttons) do
+-			local window_name = name:sub(5)
+-			but.Click:Connect(function()
+-				but:SetActive(false)
+-				_g.Windows[window_name]:Toggle()
+-			end)
+-		end
+-		if target_open then
+-			_g.Windows[target_open]:Toggle()
+-		end
+-		local SavedTheme = _g.plugin:GetSetting(_g.theme_key)
+-		if SavedTheme ~= nil then
+-			_g.Themer:SetTheme(SavedTheme)
+-		end
+-	end
+-	
+-	if plugin:GetSetting("MoonAnimator2Activated_"..tostring(lic_ver)) then
+-		activate()
+-	else
+-		table.insert(events, win_Activate.g_e.Activate.UI.MouseButton1Click:Connect(activate))
+-	end
+-	
++	for _, tool in ipairs(tools) do
++		local windowName = tool[1]
++		local button = pluginToolbar:CreateButton("", tool[2], tool[3])
++		button.Click:Connect(function()
++			button:SetActive(false)
++			_g.Windows[windowName]:Toggle()
++		end)
++	end
++
++	local savedTheme = _g.plugin:GetSetting(_g.theme_key)
++	if savedTheme ~= nil then
++		-- Invalid or obsolete saved values leave the validated Default theme intact.
++		_g.Themer:SetTheme(savedTheme)
++	end
+ 	_g.ready = true
+ end
++-- END LOCAL STARTUP

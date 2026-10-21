@@ -1,12 +1,16 @@
 PASS pinned input SHA-256: f757db4c6dd9eb68fea11891e12ac4e8cbe776b4d6d26d1c89625c5826d23206
 PASS builder tests: 13
+PASS installer_package tests: 9
 PASS marker tests: 33 (mocked Roblox APIs)
 PASS theme tests: 68 (mocked Roblox APIs)
+PASS startup tests: 22 (mocked Roblox APIs)
 PASS editor tests: 38 (mocked Roblox APIs)
 PASS playback tests: 4 (mocked Roblox APIs)
 PASS welder tests: 11 (mocked Roblox APIs)
 PASS rebuilt candidate and manifest match committed files byte-for-byte
+PASS Windows installation ZIP matches a fresh deterministic package byte-for-byte
 PASS all 139 extracted scripts match reviewed source snapshots
 PASS all 139 extracted scripts compile (no plugin execution)
-Verification passed: 167 focused tests; 139 scripts compiled.
+Verification passed: 198 focused tests; 139 scripts compiled.
 Roblox Studio integration has not been tested.
+Native Windows installer tests run separately in the Windows CI job.

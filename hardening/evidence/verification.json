@@ -3,11 +3,11 @@
   "repository": "https://github.com/Legatto2/moon-animator",
   "base_commit": "69b88295776351b5aec1cdff783bb12a194daf43",
   "candidate_file": "candidate/Moon_Animator_2_review_candidate.rbxm",
-  "candidate_sha256": "1ebe0f1a0464a469ea0bbefbe68f62e0f0cd98b3afbe4aba9893c0717dc0524b",
-  "candidate_bytes": 896915,
+  "candidate_sha256": "bc87d948e6678a6e050a834f3f69ea23b1f8b0340926589b7d8794a7fb14a37b",
+  "candidate_bytes": 910412,
   "verification_command": "python -B hardening/verify.py --luau-dir /path/to/luau-tools",
   "verification_log": "evidence/verification.log",
-  "focused_tests_total": 167,
+  "focused_tests_total": 198,
   "builder_regression_tests": {
     "passed": 13,
     "failed": 0,
@@ -44,6 +44,12 @@
       "passed": 11,
       "failed": 0,
       "roblox_apis_mocked": true
+    },
+    "startup": {
+      "command": "python tests/run-startup-tests.py --luau /path/to/luau",
+      "passed": 22,
+      "failed": 0,
+      "roblox_apis_mocked": true
     }
   },
   "baseline_reproductions": {
@@ -68,12 +74,16 @@
     "changed_scripts": [
       "Moon_Animator_2/Classes/GuiElement/LayerSystem/PlaybackHandler.luau",
       "Moon_Animator_2/Classes/LayerSystemItem/MarkerTrack.luau",
+      "Moon_Animator_2/Classes/Menu/MenuItem.luau",
       "Moon_Animator_2/Libraries/Themer.luau",
+      "Moon_Animator_2/Windows/Activate.luau",
       "Moon_Animator_2/Windows/EditMarkers.luau",
       "Moon_Animator_2/Windows/EditTheme.luau",
-      "Moon_Animator_2/Windows/Welder.luau"
+      "Moon_Animator_2/Windows/MoonAnimator.luau",
+      "Moon_Animator_2/Windows/Welder.luau",
+      "Moon_Animator_2/init.luau"
     ],
-    "unchanged_scripts": 133,
+    "unchanged_scripts": 129,
     "loadstring_calls_in_candidate_sources": 0
   },
   "binary_validation": {
@@ -83,13 +93,14 @@
     "instance_count": 7351,
     "chunk_count": 1036,
     "changed_chunk_indices": [
+      408,
       501,
       726,
       727,
       1015,
       1016
     ],
-    "unchanged_chunks_byte_identical": 1031,
+    "unchanged_chunks_byte_identical": 1030,
     "joint_instances_disconnected": 18,
     "individual_joint_endpoints_cleared": 36,
     "motor6d_instances_preserved": 72,
@@ -105,16 +116,73 @@
       "Cleared-source cleanup at real playback boundaries",
       "Approved blank boundaries outside attempt throttling",
       "Python 3.10/3.11 Windows reparse-point rejection"
-    ]
+    ],
+    "activation_and_installer_source_review_completed": true
   },
   "builder_sha256": "1a94fb77cf81900875fd734a6e70353be66c46ac8aeae0c73842d3e4d5039733",
   "studio_runtime_tested": false,
   "limits": [
     "No complete-plugin execution or Roblox Studio integration test",
-    "No current startup/version-lock verification",
     "No actual UI layout, engine audio/particles, save/export, cloning/undo, or fetched-asset runtime verification",
     "Tutorial comparison uses published chapter descriptions and source, not video playback or a transcript",
     "Interpreter limits do not validate every inherited project-import path",
     "No guarantee of complete absence of malicious behavior or defects"
-  ]
+  ],
+  "development_base_commit": "a268343a1895ea94d6981378e7003e37d88e64b0",
+  "installer_package_tests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "deterministic_zip_verified": true
+  },
+  "windows_install_package": {
+    "file": "candidate/Moon_Animator_2_Windows_Install.zip",
+    "bytes": 916788,
+    "sha256": "bbbb695dfaf58bf693ed61b5e9057605a96d2670fe84ad6a6ebbed8f2fedca4f",
+    "member_count": 3,
+    "includes_exact_candidate": true
+  },
+  "windows_installer_ci": {
+    "status": "completed",
+    "runner": "windows-2022",
+    "command": "python -B hardening/tests/run-windows-installer-tests.py",
+    "expected_test_count": 9,
+    "executes_complete_plugin": false,
+    "launches_roblox_studio": false,
+    "conclusion": "success",
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "run_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135",
+    "job_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135/job/119529136130",
+    "log": "evidence/windows-installer-ci.log",
+    "included_in_focused_tests_total": false
+  },
+  "activation_removal": {
+    "local_activation_setting_removed": true,
+    "startup_version_network_request_removed": true,
+    "optional_credits_and_terms": true,
+    "embedded_terms_preserved_byte_for_byte": true,
+    "bundled_palettes_available": 18,
+    "safe_event_preview_approval_preserved": true,
+    "engine_mouse_activation_preserved": true
+  },
+  "installer_builder_sha256": "0174b8c91fbb696de9be5627ab086fd31b9487d23828b0b9ba79f586c1afab36",
+  "installer_template_sha256": "0f7ffe4df26436810113100eb40e7b0a3842926618faa741fe42200bda07d139",
+  "github_actions_verification": {
+    "status": "completed",
+    "conclusion": "success",
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "run_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135",
+    "linux_job_url": "https://github.com/Legatto2/moon-animator/actions/runs/39688684135/job/119529136236",
+    "focused_tests_passed": 198,
+    "compiled_scripts": 139
+  },
+  "download_verification": {
+    "artifact_commit": "07fcce707c17f03f6a1a8059c1bace613a741e1d",
+    "http_status": 200,
+    "plugin_and_zip_match_reviewed_local_files": true,
+    "zip_contains_exact_candidate": true
+  }
 }

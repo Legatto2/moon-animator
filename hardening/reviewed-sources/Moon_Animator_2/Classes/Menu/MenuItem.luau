@@ -37,13 +37,6 @@ function MenuItem:new(name, Menu, ItemLabel, extra)
 				ctor:AddPaintedItem(check_frame.Frame, {BackgroundColor3 = "bg"})
 				ctor:AddPaintedItem(check_frame.Frame.UIStroke, {Color = "main"})
 			end
-			if extra and extra.Price then
-				MenuItem._SetPrice(ctor, "4.99")
-				if _g.Themer.theme_buttons[ItemLabel] == nil then
-					_g.Themer.theme_buttons[ItemLabel] = {}
-				end
-				table.insert(_g.Themer.theme_buttons[ItemLabel], ctor)
-			end
 			if _g.Input and _g.Input.Actions and _g.Input.Actions[name] then
 				MenuItem._SetControl(ctor, _g.Input.Actions[name].keys)
 				MenuItem._SetDisabled(ctor, _g.Input.Actions[name].disabled)
@@ -84,28 +77,6 @@ function MenuItem:_HoverEnded(UI)
 	self.middle_ui.Hover.Visible = false
 end
 
-function MenuItem:_SetPrice(price)
-	local price_frame = _g.new_ui.Menu.PriceFrame:Clone(); self.price_frame = price_frame
-	price_frame.Label.Text = tostring(price)
-	price_frame.Parent = self.right_ui
-	
-	self:AddPaintedItem(price_frame.Icon, {TextColor3 = "main"})
-	self:AddPaintedItem(price_frame.Label, {TextColor3 = "main"})
-	
-	self:RemovePaintedItem(self.item_frame.Label)
-	self:RemovePaintedItem(self.middle_ui.Hover)
-	self:RemovePaintedItem(self.middle_ui.Hover.UIStroke)
-	
-	local theme = _g.Themer._BuiltInThemes[self.item_frame.Label.Text]
-	self.item_frame.Label.TextColor3 = Color3.fromRGB(table.unpack(theme.main))
-	price_frame.Frame1.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.main))
-	price_frame.Frame2.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.second))
-	price_frame.Frame3.Frame.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.third))
-	
-	self.middle_ui.Hover.BackgroundColor3 = Color3.fromRGB(table.unpack(theme.highlight))
-	self.middle_ui.Hover.UIStroke.Color = Color3.fromRGB(table.unpack(theme.highlight))
-end
-
 function MenuItem:_SetControl(keys)
 	if keys == nil then keys = {} end
 	
@@ -130,9 +101,7 @@ function MenuItem:_SetDisabled(value)
 	
 	local color = value and "third" or "main"
 	
-	if not self.price_frame then
-		self:SetItemPaint(self.item_frame.Label, {TextColor3 = color})
-	end
+	self:SetItemPaint(self.item_frame.Label, {TextColor3 = color})
 	if self.more_frame then
 		self:SetItemPaint(self.more_frame.Arrow, {TextColor3 = value and "third" or "second"})
 	end
